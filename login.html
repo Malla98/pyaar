@@ -92,25 +92,40 @@ input {
 
 </style>
 <!-- MDB -->
-<!-- <script
+<script
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
-></script> -->
+></script>
 </head>
 <body>
   
     <div class="container">
         <div class="card">
-            <form>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
+            <form id="login">
+                <input type="text" placeholder="Username" id="username">
+                <input type="password" placeholder="Password" id="password">
                 <div class="buttons">
-                    <button class="register-button">Register</button>
-                    <button type="submit" class="login-button">Login</button>
+                    <button type="submit" class="login-button" id="submit">Login</button>
                 </div>
             </form>
         </div>
     </div>
 
 </body>
+<script>
+    $('#submit').click(function(){
+       if(!$('#username').val())
+       alert('Username is required');
+
+       if(!$('#password').val())
+       alert('Password is required');
+
+        if($('#password').val() == 'username' && $('#username').val() == 'password'){
+            localStorage.setItem('logedIn',true);
+            window.location.href ='https://malla98.github.io/pyaar/dashboard.html';
+        }else{
+            alert('Password or Username Incorect!');
+        }
+    });
+</script>
 </html>
