@@ -113,6 +113,10 @@ input {
     </div>
     <script>
       $(function(){
+        if (localStorage.getItem("logedIn") !== null  || localStorage.getItem("logedIn") === true) {
+        window.location.href ='https://malla98.github.io/pyaar/dashboard.html';
+}
+
         $('#login').submit(function(e){
             e.preventDefault();
            if(!$('#username').val())
