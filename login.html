@@ -110,23 +110,25 @@ input {
             </form>
         </div>
     </div>
-
+    <script>
+      $(function(){
+        $('#login').submit(function(e){
+            e.preventDefault();
+           if(!$('#username').val())
+           alert('Username is required');
+    
+           if(!$('#password').val())
+           alert('Password is required');
+    
+            if($('#password').val() == 'username' && $('#username').val() == 'password'){
+                localStorage.setItem('logedIn',true);
+                window.location.href ='https://malla98.github.io/pyaar/dashboard.html';
+            }else{
+                alert('Password or Username Incorect!');
+            }
+        });
+      });
+    </script>
 </body>
-<script>
-    $('#login').submit(function(e){
-        e.preventDefault();
-       if(!$('#username').val())
-       alert('Username is required');
 
-       if(!$('#password').val())
-       alert('Password is required');
-
-        if($('#password').val() == 'username' && $('#username').val() == 'password'){
-            localStorage.setItem('logedIn',true);
-            window.location.href ='https://malla98.github.io/pyaar/dashboard.html';
-        }else{
-            alert('Password or Username Incorect!');
-        }
-    });
-</script>
 </html>
