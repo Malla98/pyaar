@@ -1,0 +1,44 @@
+{
+    "sections": {
+      "about": {
+        "content": "This is the about us section.",
+        "image": "about.jpg"
+      },
+      "contact": {
+        "content": "This is the contact section.",
+        "image": "contact.jpg"
+      },
+      "services": {
+        "content": "This is the services section.",
+        "services": [
+          {
+            "name": "Service 1",
+            "description": "This is the description of Service 1.",
+            "image": "service-1.jpg"
+          },
+          {
+            "name": "Service 2",
+            "description": "This is the description of Service 2.",
+            "image": "service-2.jpg"
+          }
+        ]
+      },
+      "menus": {
+        "content": "This is the menus section.",
+        "menus": [
+          {
+            "name": "Dish 1",
+            "description": "This is the description of Dish 1.",
+            "image": "dish-1.jpg",
+            "price": 10
+          },
+          {
+            "name": "Dish 2",
+            "description": "This is the description of Dish 2.",
+            "image": "dish-2.jpg",
+            "price": 20
+          }
+        ]
+      }
+    }
+  }
