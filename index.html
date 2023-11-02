@@ -1764,7 +1764,7 @@
 <body>
  <div id="app" v-for="(content,i) in data">
 {{content}}
-@{{content}}
+
 
     <section data-bs-version="5.1" v-if="i=='menu'" class="menu menu5 cid-tTToUasC0B" once="menu" id="menu-5-tTToUasC0B">
       <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
@@ -2734,6 +2734,7 @@
         async function loadData() {
     const response = await fetch('assets/Js/database.json');
     const data = await response.json();
+    console.log(data);
     return data;
   }
        
