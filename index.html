@@ -1774,7 +1774,7 @@
               </a>
             </span>
             <span class="navbar-caption-wrap">
-              <a class="navbar-caption text-black display-4" href="#">{{data.sections.menu.content}}</a>
+              <a class="navbar-caption text-black display-4" href="#"></a>
             </span>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -2732,7 +2732,7 @@
         async function loadData() {
     const response = await fetch('assets/Js/database.json');
     const data = await response.json();
-    console.log(data);
+    console.log(data.sections.menu.content);
     return data;
   }
        
