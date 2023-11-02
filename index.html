@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <?php header('public/index.php'); ?>
   <!-- Site made with Mobirise Website Builder v5.9.3, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,6 @@
 
   <meta name="description" content="">
   <title>PYaar Cloud Kitchen</title>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
@@ -26,797 +26,863 @@
 
 
   <style>:root{ --background: #FFFEF7; --dominant-color: #FFF3B0; --primary-color: #9E2A2B; --secondary-color: #335C67; --success-color: #20AC6B; --danger-color: #AE1E2C; --warning-color: #CC9900; --info-color: #0AA3C2; --background-text: #000000; --dominant-text: #000000; --primary-text: #FFFFFF; --secondary-text: #FFFFFF; --success-text: #FFFFFF; --danger-text: #FFFFFF; --warning-text: #000000; --info-text: #FFFFFF;}</style>
-  <style>
-    .cid-tTToUav6t9 {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-      background: transparent;
-    }
-    .cid-tTToUav6t9 .mbr-fallback-image.disabled {
-      display: none;
-    }
-    .cid-tTToUav6t9 .mbr-fallback-image {
-      display: block;
-      background-size: cover;
-      background-position: center center;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-    }
-    @media (max-width: 767px) {
-      .cid-tTToUav6t9 .row .map-wrapper {
-        margin-top: 1rem;
-      }
-    }
-    .cid-tTToUav6t9 .google-map {
-      height: 100%;
-      position: relative;
-    }
-    .cid-tTToUav6t9 .google-map iframe {
-      height: 100%;
-      width: 100%;
-    }
-    @media (max-width: 767px) {
-      .cid-tTToUav6t9 .google-map iframe {
-        min-height: 350px;
-      }
-    }
-    .cid-tTToUav6t9 .google-map [data-state-details] {
-      color: #6b6763;
-      height: 1.5em;
-      margin-top: -0.75em;
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
-      position: absolute;
-      text-align: center;
-      top: 50%;
-      width: 100%;
-    }
-    .cid-tTToUav6t9 .google-map[data-state] {
-      background: #e9e5dc;
-    }
-    .cid-tTToUav6t9 .google-map[data-state="loading"] [data-state-details] {
-      display: none;
-    }
-    .cid-tTToUav6t9 .card-wrapper {
-      background: #ffffff;
-    }
-    @media (max-width: 767px) {
-      .cid-tTToUav6t9 .card-wrapper {
-        padding: 2rem 1.5rem;
-      }
-    }
-    @media (min-width: 768px) {
-      .cid-tTToUav6t9 .card-wrapper {
-        padding: 2.25rem;
-      }
-    }
-    .cid-tTToUav6t9 .text-wrapper {
-      padding: 0 1rem;
-    }
-    .cid-tTToUav6t9 ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-    .cid-tTToUav6t9 .content-head {
-      max-width: 800px;
-    }
-    .cid-tTToUav6t9 .mbr-section-title {
-      color: #000000;
-    }
-  </style>
-  <style>
-    .cid-tTToUasC0B  {
-      z-index: 1000;
-      width: 100%;
-      position: relative;
-    }
-    .cid-tTToUasC0B  .dropdown-item:before {
-      font-family: Moririse2 !important;
-      content: "\e966";
-      display: inline-block;
-      width: 0;
-      position: absolute;
-      left: 1rem;
-      top: 0.5rem;
-      margin-right: 0.5rem;
-      line-height: 1;
-      font-size: inherit;
-      vertical-align: middle;
-      text-align: center;
-      overflow: hidden;
-      transform: scale(0, 1);
-      transition: all 0.25s ease-in-out;
-    }
-    @media (max-width: 767px) {
-      .cid-tTToUasC0B  .navbar-toggler {
-        transform: scale(0.8);
-      }
-    }
-    .cid-tTToUasC0B  .navbar-brand {
-      flex-shrink: 0;
-      align-items: center;
-      margin-right: 0;
-      padding: 10px 0;
-      transition: all 0.3s;
-      word-break: break-word;
-      z-index: 1;
-    }
-    .cid-tTToUasC0B  .navbar-brand img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-    .cid-tTToUasC0B  .navbar-brand .navbar-caption {
-      line-height: inherit !important;
-    }
-    .cid-tTToUasC0B  .navbar-brand .navbar-logo a {
-      outline: none;
-    }
-    .cid-tTToUasC0B  .navbar-nav {
-      margin: auto;
-      margin-left: 0;
-      margin-left: auto;
-    }
-    .cid-tTToUasC0B  .navbar-nav .nav-item {
-      padding: 0 !important;
-      transition: 0.3s all !important;
-    }
-    .cid-tTToUasC0B  .navbar-nav .nav-item .nav-link {
-      padding: 16px !important;
-      margin: 0 !important;
-      border-radius: 1rem !important;
-      transition: 0.3s all !important;
-    }
-    .cid-tTToUasC0B  .navbar-nav .nav-item .nav-link:hover {
-      background-color: rgba(27, 31, 10, 0.06);
-    }
-    .cid-tTToUasC0B  .navbar-nav .open .nav-link::after {
-      transform: rotate(180deg);
-    }
-    @media (min-width: 992px) {
-      .cid-tTToUasC0B  .navbar-nav .open .nav-link::before {
-        content: "";
-        width: 100%;
-        height: 20px;
-        top: 100%;
-        background: transparent;
-        position: absolute;
-      }
-    }
-    .cid-tTToUasC0B  .navbar-nav .dropdown-item {
-      padding: 12px !important;
-      border-radius: 0.5rem !important;
-      margin: 0 8px !important;
-      transition: 0.3s all !important;
-    }
-    .cid-tTToUasC0B  .navbar-nav .dropdown-item:hover {
-      background-color: rgba(27, 31, 10, 0.06);
-    }
-    @media (min-width: 992px) {
-      .cid-tTToUasC0B  .navbar-nav {
-        padding-left: 1.5rem;
-      }
-    }
-    .cid-tTToUasC0B  .nav-link {
-      width: fit-content;
-      position: relative;
-    }
-    .cid-tTToUasC0B  .navbar-logo {
-      margin: 0 !important;
-    }
-    @media (max-width: 767px) {
-      .cid-tTToUasC0B  .navbar-logo {
-        padding-left: 0;
-      }
-    }
-    .cid-tTToUasC0B  .navbar-caption {
-      padding-left: 1rem;
-      padding-right: 0.5rem;
-    }
-    @media (max-width: 767px) {
-      .cid-tTToUasC0B  .nav-dropdown {
-        padding-bottom: 0.5rem;
-      }
-    }
-    .cid-tTToUasC0B  .nav-dropdown .link.dropdown-toggle::after {
-      margin-left: 0.5rem;
-      margin-top: 0.2rem;
-      transition: 0.3s all;
-    }
-    .cid-tTToUasC0B  .container {
-      display: flex;
-      height: 90px;
-      padding: 0.5rem 0.6rem 0.5rem 1rem;
-      flex-wrap: nowrap;
-      background: rgba(255, 255, 255, 0.8) !important;
-      left: 0;
-      right: 0;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: flex-end;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      border-radius: 100vw;
-      margin-top: 1rem;
-      background-color: #ffffff;
-      box-shadow: 0 30px 60px 0 rgba(27, 31, 10, 0.08);
-    }
-    @media (max-width: 992px) {
-      .cid-tTToUasC0B  .container {
-        padding-right: 2rem;
-      }
-    }
-    @media (max-width: 767px) {
-      .cid-tTToUasC0B  .container {
-        width: 95%;
-        height: 56px !important;
-        padding: 0.5rem;
-        margin-top: 0rem;
-      }
-    }
-    .cid-tTToUasC0B  .iconfont-wrapper {
-      font-size: 1.5rem;
-      padding-right: 0.5rem;
-    }
-    .cid-tTToUasC0B  .dropdown-menu {
-      flex-wrap: wrap;
-      flex-direction: column;
-      max-width: 100%;
-      padding: 12px 4px !important;
-      border-radius: 1.5rem;
-      transition: 0.3s all !important;
-      min-width: auto;
-      background: #ffffff;
-      background: rgba(255, 255, 255, 0.8) !important;
-    }
-    .cid-tTToUasC0B  .nav-item:focus,
-    .cid-tTToUasC0B  .nav-link:focus {
-      outline: none;
-    }
-    .cid-tTToUasC0B  .dropdown .dropdown-menu .dropdown-item {
-      width: auto;
-      transition: all 0.25s ease-in-out;
-    }
-    .cid-tTToUasC0B  .dropdown .dropdown-menu .dropdown-item::after {
-      right: 0.5rem;
-    }
-    .cid-tTToUasC0B  .dropdown .dropdown-menu .dropdown-item .mbr-iconfont {
-      margin-right: 0.5rem;
-      vertical-align: sub;
-    }
-    .cid-tTToUasC0B  .dropdown .dropdown-menu .dropdown-item .mbr-iconfont:before {
-      display: inline-block;
-      transform: scale(1, 1);
-      transition: all 0.25s ease-in-out;
-    }
-    .cid-tTToUasC0B  .collapsed .dropdown-menu .dropdown-item:before {
-      display: none;
-    }
-    .cid-tTToUasC0B  .collapsed .dropdown .dropdown-menu .dropdown-item {
-      padding: 0.235em 1.5em 0.235em 1.5em !important;
-      transition: none;
-      margin: 0 !important;
-    }
-    .cid-tTToUasC0B  .navbar {
-      min-height: 90px;
-      transition: all 0.3s;
-      border-bottom: 1px solid transparent;
-      background: transparent !important;
-      padding: 0 !important;
-      border: none !important;
-      box-shadow: none !important;
-      border-radius: 0 !important;
-    }
-    .cid-tTToUasC0B  .navbar.opened {
-      transition: all 0.3s;
-    }
-    .cid-tTToUasC0B  .navbar .dropdown-item {
-      padding: 0.5rem 1.8rem;
-    }
-    .cid-tTToUasC0B  .navbar .navbar-logo img {
-      width: auto;
-    }
-    .cid-tTToUasC0B  .navbar .navbar-collapse {
-      z-index: 1;
-      justify-content: flex-end;
-    }
-    .cid-tTToUasC0B  .navbar.collapsed {
-      justify-content: center;
-    }
-    .cid-tTToUasC0B  .navbar.collapsed .nav-item .nav-link::before {
-      display: none;
-    }
-    .cid-tTToUasC0B  .navbar.collapsed.opened .dropdown-menu {
-      top: 0;
-    }
-    @media (min-width: 992px) {
-      .cid-tTToUasC0B  .navbar.collapsed.opened:not(.navbar-short) .navbar-collapse {
-        max-height: calc(98.5vh - 4.3rem);
-      }
-    }
-    .cid-tTToUasC0B  .navbar.collapsed .dropdown-menu .dropdown-submenu {
-      left: 0 !important;
-    }
-    .cid-tTToUasC0B  .navbar.collapsed .dropdown-menu .dropdown-item:after {
-      right: auto;
-    }
-    .cid-tTToUasC0B  .navbar.collapsed .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
-      margin-left: 0.5rem;
-      margin-top: 0.2rem;
-      border-top: 0.35em solid;
-      border-right: 0.35em solid transparent;
-      border-left: 0.35em solid transparent;
-      border-bottom: 0;
-      top: 41%;
-    }
-    .cid-tTToUasC0B  .navbar.collapsed ul.navbar-nav li {
-      margin: auto;
-    }
-    .cid-tTToUasC0B  .navbar.collapsed .dropdown-menu .dropdown-item {
-      padding: 0.25rem 1.5rem;
-      text-align: center;
-    }
-    .cid-tTToUasC0B  .navbar.collapsed .icons-menu {
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-    }
-    @media (max-width: 767px) {
-      .cid-tTToUasC0B  .navbar {
-        min-height: 72px;
-      }
-      .cid-tTToUasC0B  .navbar .navbar-logo img {
-        height: 2.5rem !important;
-      }
-    }
-    @media (max-width: 991px) {
-      .cid-tTToUasC0B  .navbar .nav-item .nav-link::before {
-        display: none;
-      }
-      .cid-tTToUasC0B  .navbar.opened .dropdown-menu {
-        top: 0;
-      }
-      .cid-tTToUasC0B  .navbar .dropdown-menu .dropdown-submenu {
-        left: 0 !important;
-      }
-      .cid-tTToUasC0B  .navbar .dropdown-menu .dropdown-item:after {
-        right: auto;
-      }
-      .cid-tTToUasC0B  .navbar .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
-        margin-left: 0.5rem;
-        margin-top: 0.2rem;
-        border-top: 0.35em solid;
-        border-right: 0.35em solid transparent;
-        border-left: 0.35em solid transparent;
-        border-bottom: 0;
-        top: 40%;
-      }
-      .cid-tTToUasC0B  .navbar .dropdown-menu .dropdown-item {
-        padding: 0.25rem 1.5rem !important;
-        text-align: center;
-      }
-      .cid-tTToUasC0B  .navbar .navbar-brand {
-        flex-shrink: initial;
-        flex-basis: auto;
-        word-break: break-word;
-        padding-right: 10px;
-      }
-      .cid-tTToUasC0B  .navbar .navbar-toggler {
-        flex-basis: auto;
-      }
-      .cid-tTToUasC0B  .navbar .icons-menu {
-        padding-left: 0;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-      }
-    }
-    .cid-tTToUasC0B  .navbar.navbar-short .navbar-logo img {
-      height: 2rem;
-    }
-    .cid-tTToUasC0B  .dropdown-item.active,
-    .cid-tTToUasC0B  .dropdown-item:active {
-      background-color: transparent;
-    }
-    .cid-tTToUasC0B  .navbar-expand-lg .navbar-nav .nav-link {
-      padding: 0;
-    }
-    .cid-tTToUasC0B  .nav-dropdown .link.dropdown-toggle {
-      margin-right: 1.667em;
-    }
-    .cid-tTToUasC0B  .nav-dropdown .link.dropdown-toggle[aria-expanded="true"] {
-      margin-right: 0;
-      padding: 0.667em 1.667em;
-    }
-    .cid-tTToUasC0B  .navbar.navbar-expand-lg .dropdown .dropdown-menu {
-      background: #ffffff;
-    }
-    .cid-tTToUasC0B  .navbar.navbar-expand-lg .dropdown .dropdown-menu .dropdown-submenu {
-      margin: 0;
-      left: 105%;
-      transform: none;
-      top: -12px;
-    }
-    .cid-tTToUasC0B  .navbar .dropdown.open > .dropdown-menu {
-      display: flex;
-    }
-    .cid-tTToUasC0B  ul.navbar-nav {
-      flex-wrap: wrap;
-    }
-    .cid-tTToUasC0B  .navbar-buttons {
-      text-align: center;
-      min-width: 140px;
-    }
-    @media (max-width: 992px) {
-      .cid-tTToUasC0B  .navbar-buttons {
-        text-align: left;
-      }
-    }
-    .cid-tTToUasC0B  button.navbar-toggler {
-      outline: none;
-      width: 31px;
-      height: 20px;
-      cursor: pointer;
-      transition: all 0.2s;
-      position: relative;
-      align-self: center;
-    }
-    .cid-tTToUasC0B  button.navbar-toggler .hamburger span {
-      position: absolute;
-      right: 0;
-      width: 30px;
-      height: 2px;
-      border-right: 5px;
-      background-color: #000000;
-    }
-    .cid-tTToUasC0B  button.navbar-toggler .hamburger span:nth-child(1) {
-      top: 0;
-      transition: all 0.2s;
-    }
-    .cid-tTToUasC0B  button.navbar-toggler .hamburger span:nth-child(2) {
-      top: 8px;
-      transition: all 0.15s;
-    }
-    .cid-tTToUasC0B  button.navbar-toggler .hamburger span:nth-child(3) {
-      top: 8px;
-      transition: all 0.15s;
-    }
-    .cid-tTToUasC0B  button.navbar-toggler .hamburger span:nth-child(4) {
-      top: 16px;
-      transition: all 0.2s;
-    }
-    .cid-tTToUasC0B  nav.opened .hamburger span:nth-child(1) {
-      top: 8px;
-      width: 0;
-      opacity: 0;
-      right: 50%;
-      transition: all 0.2s;
-    }
-    .cid-tTToUasC0B  nav.opened .hamburger span:nth-child(2) {
-      transform: rotate(45deg);
-      transition: all 0.25s;
-    }
-    .cid-tTToUasC0B  nav.opened .hamburger span:nth-child(3) {
-      transform: rotate(-45deg);
-      transition: all 0.25s;
-    }
-    .cid-tTToUasC0B  nav.opened .hamburger span:nth-child(4) {
-      top: 8px;
-      width: 0;
-      opacity: 0;
-      right: 50%;
-      transition: all 0.2s;
-    }
-    .cid-tTToUasC0B  .navbar-dropdown {
-      padding: 0 1rem;
-    }
-    .cid-tTToUasC0B  a.nav-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .cid-tTToUasC0B  .icons-menu {
-      flex-wrap: nowrap;
-      display: flex;
-      justify-content: center;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      padding-top: 0.3rem;
-      text-align: center;
-    }
-    @media (max-width: 992px) {
-      .cid-tTToUasC0B  .icons-menu {
-        justify-content: flex-start;
-        margin-bottom: 0.5rem;
-      }
-    }
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      .cid-tTToUasC0B  .navbar {
-        height: 70px;
-      }
-      .cid-tTToUasC0B  .navbar.opened {
-        height: auto;
-      }
-      .cid-tTToUasC0B  .nav-item .nav-link:hover::before {
-        width: 175%;
-        max-width: calc(100% + 2rem);
-        left: -1rem;
-      }
-    }
-    .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu {
-      display: none;
-      width: max-content;
-      max-width: 500px !important;
-      transform: translateX(-50%);
-      top: calc(100% + 20px);
-      left: 50%;
-    }
-    .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown-item {
-      line-height: 1 !important;
-    }
-    .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item {
-      align-items: center;
-      display: flex;
-      height: max-content !important;
-      min-height: max-content !important;
-    }
-    .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item::after {
-      display: inline-block;
-      position: static;
-      margin-left: 0.5rem;
-      margin-top: 0;
-      margin-right: 0;
-      margin-bottom: 0;
-      transition: 0.3s all;
-      transform: rotate(-90deg);
-    }
-    .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown.open .dropdown-item::after {
-      transform: rotate(0deg);
-    }
-    .cid-tTToUasC0B  .mbr-section-btn {
-      margin: -0.6rem -0.6rem;
-    }
-    .cid-tTToUasC0B  .navbar-toggler {
-      margin-left: 12px;
-      margin-right: 8px;
-      order: 1000;
-    }
-    @media (max-width: 991px) {
-      .cid-tTToUasC0B  .navbar-brand {
-        margin-right: auto;
-      }
-      .cid-tTToUasC0B  .navbar-collapse {
-        z-index: -1 !important;
-        position: absolute;
-        top: 110%;
-        left: 0;
-        width: 100%;
-        padding: 1rem;
-        border-radius: 1.5rem;
-        background: #ffffff;
-        opacity: 1;
-        border-color: rgba(255, 255, 255, 0.8) !important;
-        background: rgba(255, 255, 255, 0.8) !important;
-        backdrop-filter: blur(8px);
-      }
-      .cid-tTToUasC0B  .navbar-nav .nav-item .nav-link::after {
-        margin-left: 10px;
-      }
-      .cid-tTToUasC0B  .navbar-nav .dropdown-item:hover {
-        background-color: rgba(27, 31, 10, 0.06);
-      }
-      .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu {
-        max-width: 100% !important;
-        transform: translateX(0);
-        top: 10px;
-        left: 0;
-        padding: 8px !important;
-        border-radius: 1rem;
-        background-color: rgba(27, 31, 10, 0.04) !important;
-      }
-      .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown-item {
-        padding: 8px !important;
-        line-height: 1 !important;
-        margin-bottom: 4px !important;
-      }
-      .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item {
-        align-items: center;
-        display: flex;
-        height: max-content !important;
-        min-height: max-content !important;
-      }
-      .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item::after {
-        display: inline-block;
-        position: static;
-        margin-left: 0.5rem;
-        margin-top: 0;
-        margin-right: 0;
-        margin-bottom: 0;
-        transition: 0.3s all;
-        transform: rotate(0deg);
-      }
-      .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown.open .dropdown-item::after {
-        transform: rotate(180deg);
-      }
-      .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown-submenu {
-        position: static;
-        width: 100%;
-        max-width: 100% !important;
-        transform: translateX(0) !important;
-        top: 0;
-        left: 0;
-        padding: 8px !important;
-        border-radius: 1rem;
-        background-color: rgba(27, 31, 10, 0.04) !important;
-      }
-      .cid-tTToUasC0B  .navbar .dropdown.open > .dropdown-menu {
-        display: flex !important;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-    @media (max-width: 575px) {
-      .cid-tTToUasC0B  .navbar-collapse {
-        padding: 1rem;
-      }
-    }
-    </style>
-   <style>
-    .cid-tTToUasHhv {
-      display: flex;
-    }
-    @media (min-width: 768px) {
-      .cid-tTToUasHhv {
-        align-items: flex-end;
-      }
-      .cid-tTToUasHhv .row {
-        justify-content: flex-start;
-      }
-      .cid-tTToUasHhv .content-wrap {
-        padding: 1rem 3rem;
-      }
-    }
-    @media (max-width: 991px) and (min-width: 768px) {
-      .cid-tTToUasHhv .content-wrap {
-        min-width: 50%;
-      }
-    }
-    @media (max-width: 767px) {
-      .cid-tTToUasHhv {
-        -webkit-align-items: center;
-        align-items: flex-end;
-      }
-      .cid-tTToUasHhv .mbr-row {
-        -webkit-justify-content: center;
-        justify-content: center;
-      }
-      .cid-tTToUasHhv .content-wrap {
-        width: 100%;
-      }
-    }
-    .cid-tTToUasHhv .mbr-fallback-image.disabled {
-      display: none;
-    }
-    .cid-tTToUasHhv .mbr-fallback-image {
-      display: block;
-      background-size: cover;
-      background-position: center center;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      background: #000000;
-    }
-    .cid-tTToUasHhv .mbr-section-title,
-    .cid-tTToUasHhv .mbr-section-subtitle {
-      text-align: left;
-      color: var(--dominant-color, #ffc091);
-    }
-    .cid-tTToUasHhv .mbr-text,
-    .cid-tTToUasHhv .mbr-section-btn {
-      text-align: left;
-    }
-    </style>
-  <style>
-    .cid-tTToUatloX {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-      background-color: transparent;
-    }
-    .cid-tTToUatloX .mbr-fallback-image.disabled {
-      display: none;
-    }
-    .cid-tTToUatloX .mbr-fallback-image {
-      display: block;
-      background-size: cover;
-      background-position: center center;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-    }
-    @media (max-width: 767px) {
-      .cid-tTToUatloX .card-content-text {
-        padding: 1.5rem 1.5rem 0 1.5rem;
-      }
-    }
-    @media (min-width: 768px) {
-      .cid-tTToUatloX .card-content-text {
-        padding: 2.25rem 2.25rem 0 2.25rem;
-      }
-    }
-    .cid-tTToUatloX .card-wrapper {
-      background: #ffffff;
-    }
-    .cid-tTToUatloX .mbr-text,
-    .cid-tTToUatloX .mbr-section-btn {
-      color: #000000;
-      text-align: left;
-    }
-    .cid-tTToUatloX .card-title,
-    .cid-tTToUatloX .card-box {
-      text-align: left;
-      color: #000000;
-    }
-  </style>
-     <style>
-      .cid-tTToUat3rb {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-        background-color: transparent;
-      }
-      .cid-tTToUat3rb .item-wrapper img {
-        width: 80px;
-        height: 80px;
-        object-fit: cover;
-        border-radius: 50% !important;
-      }
-      .cid-tTToUat3rb .mbr-fallback-image.disabled {
-        display: none;
-      }
-      .cid-tTToUat3rb .mbr-fallback-image {
-        display: block;
-        background-size: cover;
-        background-position: center center;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-      }
-      .cid-tTToUat3rb .item-wrapper {
-        background: #ffffff;
-        margin-bottom: 2rem;
-        padding: 2.25rem;
-      }
-      @media (max-width: 767px) {
-        .cid-tTToUat3rb .item-wrapper {
-          padding: 2rem 1.5rem;
-          margin-bottom: 1rem;
-        }
-      }
-      .cid-tTToUat3rb .card-title,
-      .cid-tTToUat3rb .iconfont-wrapper {
-        color: #000000;
-      }
-      .cid-tTToUat3rb .content-head {
-        max-width: 800px;
-      }
-      .cid-tTToUat3rb .mbr-section-title {
-        color: #000000;
-      }
-      .cid-tTToUat3rb .mbr-section-subtitle {
-        color: #000000;
-      }
-      .cid-tTToUat3rb .card-text {
-        color: #000000;
-      }
-    </style>
+</head>
+<body>
 
-<style>
+
+    <style>
+.cid-tTToUasC0B  {
+  z-index: 1000;
+  width: 100%;
+  position: relative;
+}
+.cid-tTToUasC0B  .dropdown-item:before {
+  font-family: Moririse2 !important;
+  content: "\e966";
+  display: inline-block;
+  width: 0;
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+  margin-right: 0.5rem;
+  line-height: 1;
+  font-size: inherit;
+  vertical-align: middle;
+  text-align: center;
+  overflow: hidden;
+  transform: scale(0, 1);
+  transition: all 0.25s ease-in-out;
+}
+@media (max-width: 767px) {
+  .cid-tTToUasC0B  .navbar-toggler {
+    transform: scale(0.8);
+  }
+}
+.cid-tTToUasC0B  .navbar-brand {
+  flex-shrink: 0;
+  align-items: center;
+  margin-right: 0;
+  padding: 10px 0;
+  transition: all 0.3s;
+  word-break: break-word;
+  z-index: 1;
+}
+.cid-tTToUasC0B  .navbar-brand img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.cid-tTToUasC0B  .navbar-brand .navbar-caption {
+  line-height: inherit !important;
+}
+.cid-tTToUasC0B  .navbar-brand .navbar-logo a {
+  outline: none;
+}
+.cid-tTToUasC0B  .navbar-nav {
+  margin: auto;
+  margin-left: 0;
+  margin-left: auto;
+}
+.cid-tTToUasC0B  .navbar-nav .nav-item {
+  padding: 0 !important;
+  transition: 0.3s all !important;
+}
+.cid-tTToUasC0B  .navbar-nav .nav-item .nav-link {
+  padding: 16px !important;
+  margin: 0 !important;
+  border-radius: 1rem !important;
+  transition: 0.3s all !important;
+}
+.cid-tTToUasC0B  .navbar-nav .nav-item .nav-link:hover {
+  background-color: rgba(27, 31, 10, 0.06);
+}
+.cid-tTToUasC0B  .navbar-nav .open .nav-link::after {
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  .cid-tTToUasC0B  .navbar-nav .open .nav-link::before {
+    content: "";
+    width: 100%;
+    height: 20px;
+    top: 100%;
+    background: transparent;
+    position: absolute;
+  }
+}
+.cid-tTToUasC0B  .navbar-nav .dropdown-item {
+  padding: 12px !important;
+  border-radius: 0.5rem !important;
+  margin: 0 8px !important;
+  transition: 0.3s all !important;
+}
+.cid-tTToUasC0B  .navbar-nav .dropdown-item:hover {
+  background-color: rgba(27, 31, 10, 0.06);
+}
+@media (min-width: 992px) {
+  .cid-tTToUasC0B  .navbar-nav {
+    padding-left: 1.5rem;
+  }
+}
+.cid-tTToUasC0B  .nav-link {
+  width: fit-content;
+  position: relative;
+}
+.cid-tTToUasC0B  .navbar-logo {
+  margin: 0 !important;
+}
+@media (max-width: 767px) {
+  .cid-tTToUasC0B  .navbar-logo {
+    padding-left: 0;
+  }
+}
+.cid-tTToUasC0B  .navbar-caption {
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+@media (max-width: 767px) {
+  .cid-tTToUasC0B  .nav-dropdown {
+    padding-bottom: 0.5rem;
+  }
+}
+.cid-tTToUasC0B  .nav-dropdown .link.dropdown-toggle::after {
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+  transition: 0.3s all;
+}
+.cid-tTToUasC0B  .container {
+  display: flex;
+  height: 90px;
+  padding: 0.5rem 0.6rem 0.5rem 1rem;
+  flex-wrap: nowrap;
+  background: rgba(255, 255, 255, 0.8) !important;
+  left: 0;
+  right: 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100vw;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 30px 60px 0 rgba(27, 31, 10, 0.08);
+}
+@media (max-width: 992px) {
+  .cid-tTToUasC0B  .container {
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .cid-tTToUasC0B  .container {
+    width: 95%;
+    height: 56px !important;
+    padding: 0.5rem;
+    margin-top: 0rem;
+  }
+}
+.cid-tTToUasC0B  .iconfont-wrapper {
+  font-size: 1.5rem;
+  padding-right: 0.5rem;
+}
+.cid-tTToUasC0B  .dropdown-menu {
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 100%;
+  padding: 12px 4px !important;
+  border-radius: 1.5rem;
+  transition: 0.3s all !important;
+  min-width: auto;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+.cid-tTToUasC0B  .nav-item:focus,
+.cid-tTToUasC0B  .nav-link:focus {
+  outline: none;
+}
+.cid-tTToUasC0B  .dropdown .dropdown-menu .dropdown-item {
+  width: auto;
+  transition: all 0.25s ease-in-out;
+}
+.cid-tTToUasC0B  .dropdown .dropdown-menu .dropdown-item::after {
+  right: 0.5rem;
+}
+.cid-tTToUasC0B  .dropdown .dropdown-menu .dropdown-item .mbr-iconfont {
+  margin-right: 0.5rem;
+  vertical-align: sub;
+}
+.cid-tTToUasC0B  .dropdown .dropdown-menu .dropdown-item .mbr-iconfont:before {
+  display: inline-block;
+  transform: scale(1, 1);
+  transition: all 0.25s ease-in-out;
+}
+.cid-tTToUasC0B  .collapsed .dropdown-menu .dropdown-item:before {
+  display: none;
+}
+.cid-tTToUasC0B  .collapsed .dropdown .dropdown-menu .dropdown-item {
+  padding: 0.235em 1.5em 0.235em 1.5em !important;
+  transition: none;
+  margin: 0 !important;
+}
+.cid-tTToUasC0B  .navbar {
+  min-height: 90px;
+  transition: all 0.3s;
+  border-bottom: 1px solid transparent;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.cid-tTToUasC0B  .navbar.opened {
+  transition: all 0.3s;
+}
+.cid-tTToUasC0B  .navbar .dropdown-item {
+  padding: 0.5rem 1.8rem;
+}
+.cid-tTToUasC0B  .navbar .navbar-logo img {
+  width: auto;
+}
+.cid-tTToUasC0B  .navbar .navbar-collapse {
+  z-index: 1;
+  justify-content: flex-end;
+}
+.cid-tTToUasC0B  .navbar.collapsed {
+  justify-content: center;
+}
+.cid-tTToUasC0B  .navbar.collapsed .nav-item .nav-link::before {
+  display: none;
+}
+.cid-tTToUasC0B  .navbar.collapsed.opened .dropdown-menu {
+  top: 0;
+}
+@media (min-width: 992px) {
+  .cid-tTToUasC0B  .navbar.collapsed.opened:not(.navbar-short) .navbar-collapse {
+    max-height: calc(98.5vh - 4.3rem);
+  }
+}
+.cid-tTToUasC0B  .navbar.collapsed .dropdown-menu .dropdown-submenu {
+  left: 0 !important;
+}
+.cid-tTToUasC0B  .navbar.collapsed .dropdown-menu .dropdown-item:after {
+  right: auto;
+}
+.cid-tTToUasC0B  .navbar.collapsed .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+  border-top: 0.35em solid;
+  border-right: 0.35em solid transparent;
+  border-left: 0.35em solid transparent;
+  border-bottom: 0;
+  top: 41%;
+}
+.cid-tTToUasC0B  .navbar.collapsed ul.navbar-nav li {
+  margin: auto;
+}
+.cid-tTToUasC0B  .navbar.collapsed .dropdown-menu .dropdown-item {
+  padding: 0.25rem 1.5rem;
+  text-align: center;
+}
+.cid-tTToUasC0B  .navbar.collapsed .icons-menu {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+@media (max-width: 767px) {
+  .cid-tTToUasC0B  .navbar {
+    min-height: 72px;
+  }
+  .cid-tTToUasC0B  .navbar .navbar-logo img {
+    height: 2.5rem !important;
+  }
+}
+@media (max-width: 991px) {
+  .cid-tTToUasC0B  .navbar .nav-item .nav-link::before {
+    display: none;
+  }
+  .cid-tTToUasC0B  .navbar.opened .dropdown-menu {
+    top: 0;
+  }
+  .cid-tTToUasC0B  .navbar .dropdown-menu .dropdown-submenu {
+    left: 0 !important;
+  }
+  .cid-tTToUasC0B  .navbar .dropdown-menu .dropdown-item:after {
+    right: auto;
+  }
+  .cid-tTToUasC0B  .navbar .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+    border-top: 0.35em solid;
+    border-right: 0.35em solid transparent;
+    border-left: 0.35em solid transparent;
+    border-bottom: 0;
+    top: 40%;
+  }
+  .cid-tTToUasC0B  .navbar .dropdown-menu .dropdown-item {
+    padding: 0.25rem 1.5rem !important;
+    text-align: center;
+  }
+  .cid-tTToUasC0B  .navbar .navbar-brand {
+    flex-shrink: initial;
+    flex-basis: auto;
+    word-break: break-word;
+    padding-right: 10px;
+  }
+  .cid-tTToUasC0B  .navbar .navbar-toggler {
+    flex-basis: auto;
+  }
+  .cid-tTToUasC0B  .navbar .icons-menu {
+    padding-left: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+.cid-tTToUasC0B  .navbar.navbar-short .navbar-logo img {
+  height: 2rem;
+}
+.cid-tTToUasC0B  .dropdown-item.active,
+.cid-tTToUasC0B  .dropdown-item:active {
+  background-color: transparent;
+}
+.cid-tTToUasC0B  .navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0;
+}
+.cid-tTToUasC0B  .nav-dropdown .link.dropdown-toggle {
+  margin-right: 1.667em;
+}
+.cid-tTToUasC0B  .nav-dropdown .link.dropdown-toggle[aria-expanded="true"] {
+  margin-right: 0;
+  padding: 0.667em 1.667em;
+}
+.cid-tTToUasC0B  .navbar.navbar-expand-lg .dropdown .dropdown-menu {
+  background: #ffffff;
+}
+.cid-tTToUasC0B  .navbar.navbar-expand-lg .dropdown .dropdown-menu .dropdown-submenu {
+  margin: 0;
+  left: 105%;
+  transform: none;
+  top: -12px;
+}
+.cid-tTToUasC0B  .navbar .dropdown.open > .dropdown-menu {
+  display: flex;
+}
+.cid-tTToUasC0B  ul.navbar-nav {
+  flex-wrap: wrap;
+}
+.cid-tTToUasC0B  .navbar-buttons {
+  text-align: center;
+  min-width: 140px;
+}
+@media (max-width: 992px) {
+  .cid-tTToUasC0B  .navbar-buttons {
+    text-align: left;
+  }
+}
+.cid-tTToUasC0B  button.navbar-toggler {
+  outline: none;
+  width: 31px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  align-self: center;
+}
+.cid-tTToUasC0B  button.navbar-toggler .hamburger span {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 2px;
+  border-right: 5px;
+  background-color: #000000;
+}
+.cid-tTToUasC0B  button.navbar-toggler .hamburger span:nth-child(1) {
+  top: 0;
+  transition: all 0.2s;
+}
+.cid-tTToUasC0B  button.navbar-toggler .hamburger span:nth-child(2) {
+  top: 8px;
+  transition: all 0.15s;
+}
+.cid-tTToUasC0B  button.navbar-toggler .hamburger span:nth-child(3) {
+  top: 8px;
+  transition: all 0.15s;
+}
+.cid-tTToUasC0B  button.navbar-toggler .hamburger span:nth-child(4) {
+  top: 16px;
+  transition: all 0.2s;
+}
+.cid-tTToUasC0B  nav.opened .hamburger span:nth-child(1) {
+  top: 8px;
+  width: 0;
+  opacity: 0;
+  right: 50%;
+  transition: all 0.2s;
+}
+.cid-tTToUasC0B  nav.opened .hamburger span:nth-child(2) {
+  transform: rotate(45deg);
+  transition: all 0.25s;
+}
+.cid-tTToUasC0B  nav.opened .hamburger span:nth-child(3) {
+  transform: rotate(-45deg);
+  transition: all 0.25s;
+}
+.cid-tTToUasC0B  nav.opened .hamburger span:nth-child(4) {
+  top: 8px;
+  width: 0;
+  opacity: 0;
+  right: 50%;
+  transition: all 0.2s;
+}
+.cid-tTToUasC0B  .navbar-dropdown {
+  padding: 0 1rem;
+}
+.cid-tTToUasC0B  a.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cid-tTToUasC0B  .icons-menu {
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.3rem;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .cid-tTToUasC0B  .icons-menu {
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .cid-tTToUasC0B  .navbar {
+    height: 70px;
+  }
+  .cid-tTToUasC0B  .navbar.opened {
+    height: auto;
+  }
+  .cid-tTToUasC0B  .nav-item .nav-link:hover::before {
+    width: 175%;
+    max-width: calc(100% + 2rem);
+    left: -1rem;
+  }
+}
+.cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu {
+  display: none;
+  width: max-content;
+  max-width: 500px !important;
+  transform: translateX(-50%);
+  top: calc(100% + 20px);
+  left: 50%;
+}
+.cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown-item {
+  line-height: 1 !important;
+}
+.cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item {
+  align-items: center;
+  display: flex;
+  height: max-content !important;
+  min-height: max-content !important;
+}
+.cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item::after {
+  display: inline-block;
+  position: static;
+  margin-left: 0.5rem;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  transition: 0.3s all;
+  transform: rotate(-90deg);
+}
+.cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown.open .dropdown-item::after {
+  transform: rotate(0deg);
+}
+.cid-tTToUasC0B  .mbr-section-btn {
+  margin: -0.6rem -0.6rem;
+}
+.cid-tTToUasC0B  .navbar-toggler {
+  margin-left: 12px;
+  margin-right: 8px;
+  order: 1000;
+}
+@media (max-width: 991px) {
+  .cid-tTToUasC0B  .navbar-brand {
+    margin-right: auto;
+  }
+  .cid-tTToUasC0B  .navbar-collapse {
+    z-index: -1 !important;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background: #ffffff;
+    opacity: 1;
+    border-color: rgba(255, 255, 255, 0.8) !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(8px);
+  }
+  .cid-tTToUasC0B  .navbar-nav .nav-item .nav-link::after {
+    margin-left: 10px;
+  }
+  .cid-tTToUasC0B  .navbar-nav .dropdown-item:hover {
+    background-color: rgba(27, 31, 10, 0.06);
+  }
+  .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu {
+    max-width: 100% !important;
+    transform: translateX(0);
+    top: 10px;
+    left: 0;
+    padding: 8px !important;
+    border-radius: 1rem;
+    background-color: rgba(27, 31, 10, 0.04) !important;
+  }
+  .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown-item {
+    padding: 8px !important;
+    line-height: 1 !important;
+    margin-bottom: 4px !important;
+  }
+  .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item {
+    align-items: center;
+    display: flex;
+    height: max-content !important;
+    min-height: max-content !important;
+  }
+  .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item::after {
+    display: inline-block;
+    position: static;
+    margin-left: 0.5rem;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    transition: 0.3s all;
+    transform: rotate(0deg);
+  }
+  .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown.open .dropdown-item::after {
+    transform: rotate(180deg);
+  }
+  .cid-tTToUasC0B  .navbar .dropdown > .dropdown-menu .dropdown-submenu {
+    position: static;
+    width: 100%;
+    max-width: 100% !important;
+    transform: translateX(0) !important;
+    top: 0;
+    left: 0;
+    padding: 8px !important;
+    border-radius: 1rem;
+    background-color: rgba(27, 31, 10, 0.04) !important;
+  }
+  .cid-tTToUasC0B  .navbar .dropdown.open > .dropdown-menu {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 575px) {
+  .cid-tTToUasC0B  .navbar-collapse {
+    padding: 1rem;
+  }
+}
+</style>
+
+<section data-bs-version="5.1" class="menu menu5 cid-tTToUasC0B" once="menu" id="menu-5-tTToUasC0B">
+  <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+    <div class="container">
+      <div class="navbar-brand">
+        <span class="navbar-logo">
+					<a href="#">
+						<img src="assets/images/icon.png" style="height: 4.3rem;">
+					</a>
+				</span>
+				<span class="navbar-caption-wrap">
+          <a class="navbar-caption text-black display-4" href="#">PYaar</a>
+        </span>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-bs-toggle="collapse" data-target="#navbarSupportedContent"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+          <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="#"
+              aria-expanded="false">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="#contacts-2-tTToUav6t9">Contact</a>
+          </li>
+        </ul>
+        <div class="navbar-buttons mbr-section-btn">
+          <a class="btn btn-primary display-4" href="login.html">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
+
+    <style>
+.cid-tTToUasHhv {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .cid-tTToUasHhv {
+    align-items: flex-end;
+  }
+  .cid-tTToUasHhv .row {
+    justify-content: flex-start;
+  }
+  .cid-tTToUasHhv .content-wrap {
+    padding: 1rem 3rem;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .cid-tTToUasHhv .content-wrap {
+    min-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .cid-tTToUasHhv {
+    -webkit-align-items: center;
+    align-items: flex-end;
+  }
+  .cid-tTToUasHhv .mbr-row {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .cid-tTToUasHhv .content-wrap {
+    width: 100%;
+  }
+}
+.cid-tTToUasHhv .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-tTToUasHhv .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #000000;
+}
+.cid-tTToUasHhv .mbr-section-title,
+.cid-tTToUasHhv .mbr-section-subtitle {
+  text-align: left;
+  color: var(--dominant-color, #ffc091);
+}
+.cid-tTToUasHhv .mbr-text,
+.cid-tTToUasHhv .mbr-section-btn {
+  text-align: left;
+}
+</style>
+<section data-bs-version="5.1" class="header18 cid-tTToUasHhv mbr-fullscreen" data-bg-video="https://www.youtube.com/embed/95SNbn340TE?autoplay&#x3D;1&amp;loop&#x3D;1&amp;playlist&#x3D;95SNbn340TE&amp;t&#x3D;20&amp;mute&#x3D;1&amp;playsinline&#x3D;1&amp;controls&#x3D;0&amp;showinfo&#x3D;0&amp;autohide&#x3D;1&amp;allowfullscreen&#x3D;true&amp;mode&#x3D;transparent" id="hero-15-tTToUasHhv">
+  <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="content-wrap col-12 col-md-8">
+        <h1
+          class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1 animate__animated animate__delay-1s animate__fadeInUp">
+          <strong>PYaar Kitchen</strong>
+        </h1>
+        <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7 animate__animated animate__delay-1s animate__fadeInUp">Experience the Delight of Authentic Flavors</p>
+        <div class="mbr-section-btn">
+          <a class="btn btn-white-outline display-7 animate__animated animate__delay-1s animate__fadeInUp" href="#">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <style>
+  .cid-tTToUatloX {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: transparent;
+  }
+  .cid-tTToUatloX .mbr-fallback-image.disabled {
+    display: none;
+  }
+  .cid-tTToUatloX .mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+  @media (max-width: 767px) {
+    .cid-tTToUatloX .card-content-text {
+      padding: 1.5rem 1.5rem 0 1.5rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .cid-tTToUatloX .card-content-text {
+      padding: 2.25rem 2.25rem 0 2.25rem;
+    }
+  }
+  .cid-tTToUatloX .card-wrapper {
+    background: #ffffff;
+  }
+  .cid-tTToUatloX .mbr-text,
+  .cid-tTToUatloX .mbr-section-btn {
+    color: #000000;
+    text-align: left;
+  }
+  .cid-tTToUatloX .card-title,
+  .cid-tTToUatloX .card-box {
+    text-align: left;
+    color: #000000;
+  }
+</style>
+<section data-bs-version="5.1" class="article9 cid-tTToUatloX" id="about-me-9-tTToUatloX">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="card col-md-12 col-lg-10">
+        <div class="card-wrapper">
+          <div class="card-content-text">
+            <h3 class="card-title mbr-fonts-style mbr-white mt-3 mb-4 display-2">
+            <strong>About PYaar Cloud Kitchen</strong>
+          </h3>
+          <div class="row card-box align-left">
+            <div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                <p class="mbr-text mbr-fonts-style display-7">Welcome to PYaar Cloud Kitchen, where passion meets culinary excellence.</p>
+                <p class="mbr-text mbr-fonts-style display-7">We are a cloud kitchen dedicated to serving you the most delicious and authentic dishes from around the world.</p>
+                <p class="mbr-text mbr-fonts-style display-7">Our team of talented chefs and food enthusiasts work tirelessly to bring you the best dining experience right at your doorstep.</p>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="image-wrapper d-flex justify-content-center mt-3">
+            <img src="assets/images/photo-1496412705862-e0088f16f791.jpeg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <style>
+  .cid-tTToUat3rb {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: transparent;
+  }
+  .cid-tTToUat3rb .item-wrapper img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50% !important;
+  }
+  .cid-tTToUat3rb .mbr-fallback-image.disabled {
+    display: none;
+  }
+  .cid-tTToUat3rb .mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+  .cid-tTToUat3rb .item-wrapper {
+    background: #ffffff;
+    margin-bottom: 2rem;
+    padding: 2.25rem;
+  }
+  @media (max-width: 767px) {
+    .cid-tTToUat3rb .item-wrapper {
+      padding: 2rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  .cid-tTToUat3rb .card-title,
+  .cid-tTToUat3rb .iconfont-wrapper {
+    color: #000000;
+  }
+  .cid-tTToUat3rb .content-head {
+    max-width: 800px;
+  }
+  .cid-tTToUat3rb .mbr-section-title {
+    color: #000000;
+  }
+  .cid-tTToUat3rb .mbr-section-subtitle {
+    color: #000000;
+  }
+  .cid-tTToUat3rb .card-text {
+    color: #000000;
+  }
+</style>
+<section data-bs-version="5.1" class="features19 cid-tTToUat3rb" id="features-19-tTToUat3rb">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 mb-5 content-head">
+				<h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+					<strong>Why Choose PYaar?</strong>
+				</h3>
+				<h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">Discover the features that set us apart from the rest.</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="item features-without-image col-12 col-lg-4">
+				<div class="item-wrapper">
+					<div class="card-box align-left">
+						<div class="img-wrapper mb-3">
+							<img class="" src="assets/images/photo-1695653423459-beb6b8a8169b.jpeg">
+						</div>
+						<h5 class="card-title mbr-fonts-style display-5">
+							<strong>Quality Ingredients</strong>
+						</h5>
+						<p class="card-text mbr-fonts-style display-7">We source only the freshest and finest ingredients to ensure the highest quality in every dish.</p>
+					</div>
+				</div>
+			</div>
+			<div class="item features-without-image col-12 col-lg-4">
+				<div class="item-wrapper">
+					<div class="card-box align-left">
+						<div class="img-wrapper mb-3">
+							<img class="" src="assets/images/photo-1515003197210-e0cd71810b5f.jpeg">
+						</div>
+						<h5 class="card-title mbr-fonts-style display-5">
+							<strong>Exquisite Flavors</strong>
+						</h5>
+						<p class="card-text mbr-fonts-style display-7">Our skilled chefs combine traditional recipes with innovative techniques to create unique and mouthwatering flavors.</p>
+					</div>
+				</div>
+			</div>
+			<div class="item features-without-image col-12 col-lg-4">
+				<div class="item-wrapper">
+					<div class="card-box align-left">
+						<div class="img-wrapper mb-3">
+							<img class="" src="assets/images/photo-1512621776951-a57141f2eefd.jpeg">
+						</div>
+						<h5 class="card-title mbr-fonts-style display-5">
+							<strong>Convenient Delivery</strong>
+						</h5>
+						<p class="card-text mbr-fonts-style display-7">Enjoy the convenience of doorstep delivery, bringing the taste of PYaar directly to you.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+    <style>
   .cid-tTToUauKxI {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -945,8 +1011,85 @@
     color: #232323;
   }
 </style>
-
-<style>
+<section data-bs-version="5.1" class="slider2 mbr-embla cid-tTToUauKxI" id="testimonials-1-tTToUauKxI">
+	<div class="position-relative text-center">
+		<div class="embla" data-skip-snaps="true" data-align="center" data-auto-play-interval="5" data-draggable="true">
+			<div class="embla__viewport container-fluid">
+				<div class="embla__container">
+					<div class="embla__slide slider-image item" style="margin-left: 10rem; margin-right: 10rem;">
+						<div class="user">
+							<div class="user_image">
+								<div class="item-wrapper position-relative">
+									<img src="assets/images/me.jpg">
+								</div>
+							</div>
+							<div class="user_text mb-4">
+								<p class="mbr-fonts-style display-5">
+									<strong>Delicious food and excellent service!</strong>
+								</p>
+							</div>
+							<div class="user_name mbr-fonts-style display-7">
+								Emily
+							</div>
+							<div class="user_desk mbr-fonts-style display-7">
+								Foodie
+							</div>
+						</div>
+					</div>
+					<div class="embla__slide slider-image item" style="margin-left: 10rem; margin-right: 10rem;">
+						<div class="user">
+							<div class="user_image">
+								<div class="item-wrapper position-relative">
+									<img src="assets/images/photo-1607556114526-058f5efdf49e.jpeg">
+								</div>
+							</div>
+							<div class="user_text mb-4">
+								<p class="mbr-fonts-style display-5">
+									<strong>PYaar never fails to impress!</strong>
+								</p>
+							</div>
+							<div class="user_name mbr-fonts-style display-7">
+								John
+							</div>
+							<div class="user_desk mbr-fonts-style display-7">
+								Food Critic
+							</div>
+						</div>
+					</div>
+					<div class="embla__slide slider-image item" style="margin-left: 10rem; margin-right: 10rem;">
+						<div class="user">
+							<div class="user_image">
+								<div class="item-wrapper position-relative">
+									<img src="assets/images/photo-1568530134868-5d89f49d5a72.jpeg">
+								</div>
+							</div>
+							<div class="user_text mb-4">
+								<p class="mbr-fonts-style display-5">
+									<strong>The best cloud kitchen in town!</strong>
+								</p>
+							</div>
+							<div class="user_name mbr-fonts-style display-7">
+								Sophia
+							</div>
+							<div class="user_desk mbr-fonts-style display-7">
+								Food Blogger
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="embla__button embla__button--prev">
+				<span class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont" aria-hidden="true"></span>
+				<span class="sr-only visually-hidden visually-hidden visually-hidden">Previous</span>
+			</button>
+			<button class="embla__button embla__button--next">
+				<span class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont" aria-hidden="true"></span>
+				<span class="sr-only visually-hidden visually-hidden visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+</section>
+    <style>
   .cid-tTToUausqQ {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -996,33 +1139,82 @@
     max-width: 800px;
   }
 </style>
-<style>
-  .cid-tTToUavkI0 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    background-color: transparent;
-  }
-  .cid-tTToUavkI0 .mbr-overlay {
-    background-color: #ffffff;
-    opacity: 0.4;
-  }
-  .cid-tTToUavkI0 form .mbr-section-btn {
-    text-align: center;
-    width: 100%;
-  }
-  .cid-tTToUavkI0 form .mbr-section-btn .btn {
-    display: inline-flex;
-  }
-  @media (max-width: 991px) {
-    .cid-tTToUavkI0 form .mbr-section-btn .btn {
-      width: 100%;
-    }
-  }
-  .cid-tTToUavkI0 .content-head {
-    max-width: 800px;
-  }
-</style>
-<style>
+<section data-bs-version="5.1" class="features03 cid-tTToUausqQ" id="events-1-tTToUausqQ">
+	<div class="container-fluid">
+		<div class="row justify-content-center mb-5">
+			<div class="col-12 content-head">
+				<div class="mbr-section-head">
+					<h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+						<strong>Upcoming Events</strong>
+					</h4>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="item features-image col-12 col-md-6 col-lg-3 active">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="assets/images/photo-1473093295043-cdd812d0e601.jpeg" title="">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+							<strong><a class="text-black fw-bold" href="#">Taste of Italy</a></strong>
+						</h6>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">November 5, 2023</p>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">Experience the flavors of Italy with our special menu.</p>
+						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Join</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-3">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="assets/images/photo-1494859802809-d069c3b71a8a.jpeg" title="" data-slide-to="1" data-bs-slide-to="1">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+							<strong><a class="text-black fw-bold" href="#">Spice Festival</a></strong>
+						</h6>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">November 12, 2023</p>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">Get ready for a spicy culinary adventure like no other.</p>
+						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Join</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-3">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="assets/images/photo-1543339308-43e59d6b73a6.jpeg" title="" data-slide-to="2" data-bs-slide-to="2">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
+							<strong><a class="text-black fw-bold" href="#">Seafood Extravaganza</a></strong>
+						</h6>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">November 19, 2023</p>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">Indulge in a feast of the freshest seafood delicacies.</p>
+						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Join</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-3">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="assets/images/photo-1498837167922-ddd27525d352.jpeg" title="" data-slide-to="3" data-bs-slide-to="3">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
+							<strong><a class="text-black fw-bold" href="#">Holiday Feast</a></strong>
+						</h6>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">December 24, 2023</p>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">Celebrate the holiday season with a lavish feast at PYaar.</p>
+						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Join</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+    <style>
   .cid-tTToUauSOS {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -1166,7 +1358,91 @@
     max-width: 800px;
   }
 </style>
-<style>
+<section data-bs-version="5.1" class="slider4 mbr-embla cid-tTToUauSOS" id="gallery-5-tTToUauSOS">
+    <div class="container-fluid">
+        <div class="row mb-5 justify-content-center">
+			<div class="col-12 content-head">
+				<h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+					<strong>A Visual Delight</strong>
+				</h3>
+			</div>
+		</div>
+        <div class="row">
+            <div class="col-12">
+                <div class="embla position-relative" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-loop="true" data-auto-play-interval="5" data-draggable="true">
+                    <div class="embla__viewport">
+                        <div class="embla__container">
+                            <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+                                <a href="#">
+                                    <div class="slide-content">
+                                        <div class="item-img">
+                                            <div class="item-wrapper">
+                                                <img src="assets/images/photo-1455619452474-d2be8b1e70cd.jpeg" title="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+                                <a href="#">
+                                    <div class="slide-content">
+                                        <div class="item-img">
+                                            <div class="item-wrapper">
+                                                <img src="assets/images/photo-1606787366850-de6330128bfc.jpeg" title="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+                                <a href="#">
+                                    <div class="slide-content">
+                                        <div class="item-img">
+                                            <div class="item-wrapper">
+                                                <img src="assets/images/photo-1505935428862-770b6f24f629.jpeg" title="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+                                <a href="#">
+                                    <div class="slide-content">
+                                        <div class="item-img">
+                                            <div class="item-wrapper">
+                                                <img src="assets/images/photo-1504674900247-0877df9cc836.jpeg" title="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+                                <a href="#">
+                                    <div class="slide-content">
+                                        <div class="item-img">
+                                            <div class="item-wrapper">
+                                                <img src="assets/images/photo-1490818387583-1baba5e638af.jpeg" title="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="embla__button embla__button--prev">
+                        <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
+                        <span class="sr-only visually-hidden visually-hidden">Previous</span>
+                    </button>
+                    <button class="embla__button embla__button--next">
+                        <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
+                        <span class="sr-only visually-hidden visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <style>
   .cid-tTToUau3Wo {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -1232,7 +1508,73 @@
     max-width: 800px;
   }
 </style>
-<style>
+<section data-bs-version="5.1" class="features4 cid-tTToUau3Wo" id="service-list-2-tTToUau3Wo">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 content-head">
+				<div class="mbr-section-head mb-5">
+					<h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+						<strong>Services</strong>
+					</h4>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="item features-image col-12 col-md-6 col-lg-4">
+				<div class="item-wrapper">
+					<div class="item-img">
+						<img src="assets/images/photo-1490645935967-10de6ba17061.jpeg">
+					</div>
+					<div class="item-content">
+						<h5 class="item-title mbr-fonts-style display-5">
+							<strong>Catering</strong>
+						</h5>
+						<h6 class="item-subtitle mbr-fonts-style display-7">$99</h6>
+						<p class="mbr-text mbr-fonts-style display-7">Let us take care of your next event with our professional catering services.</p>
+						<div class="mbr-section-btn item-footer">
+						<a href="" class="btn item-btn btn-primary display-7">Book Now</a>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-4">
+				<div class="item-wrapper">
+					<div class="item-img">
+						<img src="assets/images/photo-1695653422543-7da6d6744364.jpeg">
+					</div>
+					<div class="item-content">
+						<h5 class="item-title mbr-fonts-style display-5">
+							<strong>Meal Plans</strong>
+						</h5>
+						<h6 class="item-subtitle mbr-fonts-style display-7">$49</h6>
+						<p class="mbr-text mbr-fonts-style display-7">Enjoy delicious and healthy meals delivered to your doorstep with our customizable meal plans.</p>
+						<div class="mbr-section-btn item-footer">
+							<a href="" class="btn item-btn btn-primary display-7">Book Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-4">
+				<div class="item-wrapper">
+					<div class="item-img">
+						<img src="assets/images/photo-1695653423034-d15c9f3d1328.jpeg">
+					</div>
+					<div class="item-content">
+						<h5 class="item-title mbr-fonts-style display-5">
+							<strong>Special Events</strong>
+						</h5>
+						<h6 class="item-subtitle mbr-fonts-style display-7">$199</h6>
+						<p class="mbr-text mbr-fonts-style display-7">Make your special occasions unforgettable with our personalized event planning and catering services.</p>
+						<div class="mbr-section-btn item-footer">
+							<a href="" class="btn item-btn btn-primary display-7">Book Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+    <style>
   .cid-tTToUau8o4 {
     padding-top: 8rem;
     padding-bottom: 8rem;
@@ -1279,7 +1621,26 @@
     color: #000000;
   }
 </style>
-<style>
+<section data-bs-version="5.1" class="article4 cid-tTToUau8o4" id="generic-text-4-tTToUau8o4">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-12 col-lg-5 image-wrapper">
+				<img class="w-100" src="assets/images/photo-1496116218417-1a781b1c416c.jpeg">
+			</div>
+			<div class="col-12 col-md-12 col-lg">
+				<div class="text-wrapper align-left">
+					<h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
+						<strong>Experience the PYaar Difference</strong>
+					</h1>
+					<p class="mbr-text mbr-fonts-style mb-3 display-7">At PYaar Cloud Kitchen, we believe that food is not just about sustenance, but a way to create lasting memories.</p>
+          <p class="mbr-text mbr-fonts-style mb-3 display-7">With our passion for culinary excellence and commitment to quality, we strive to deliver an exceptional dining experience to our customers.</p>
+          <p class="mbr-text mbr-fonts-style mb-3 display-7">Join us on this gastronomic journey and discover the PYaar difference for yourself.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+    <style>
   .cid-tTToUaub4h {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -1304,8 +1665,51 @@
     color: #000000;
   }
 </style>
-
-<style>
+<section data-bs-version="5.1" class="timeline01 cid-tTToUaub4h" id="timeline-1-tTToUaub4h">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 mb-5 content-head">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>Our Journey</strong>
+                </h3>
+            </div>
+        </div>
+        <div class="row justify-content-center item features-without-image mb-5">
+            <div class="col-12 col-md">
+                <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-7">
+                    <strong>Inception</strong>
+                </h5>
+                <h6 class="mbr-card-subtitle mbr-fonts-style mt-0 mb-3 display-7">2018</h6>
+            </div>
+            <div class="col-md-12 col-lg-6 item-wrapper">
+                <p class="mbr-text mbr-fonts-style mt-0 mb-0 display-7">PYaar Cloud Kitchen was founded with a vision to revolutionize the food delivery industry.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center item features-without-image mb-5">
+            <div class="col-12 col-md">
+                <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-7">
+                    <strong>Expansion</strong>
+                </h5>
+                <h6 class="mbr-card-subtitle mbr-fonts-style mt-0 mb-3 display-7">2020</h6>
+            </div>
+            <div class="col-md-12 col-lg-6 item-wrapper">
+                <p class="mbr-text mbr-fonts-style mt-0 mb-0 display-7">We expanded our operations to serve more customers and introduced new cuisines to our menu.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center item features-without-image mb-5">
+            <div class="col-12 col-md">
+                <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-7">
+                    <strong>Innovation</strong>
+                </h5>
+                <h6 class="mbr-card-subtitle mbr-fonts-style mt-0 mb-3 display-7">2022</h6>
+            </div>
+            <div class="col-md-12 col-lg-6 item-wrapper">
+                <p class="mbr-text mbr-fonts-style mt-0 mb-0 display-7">Continuously striving for innovation, we introduced state-of-the-art technology to enhance our delivery services.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <style>
   .cid-tTToUav3Sc {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -1361,7 +1765,49 @@
     text-align: center;
   }
 </style>
-<style>
+<section data-bs-version="5.1" class="features23 cid-tTToUav3Sc" id="metrics-1-tTToUav3Sc">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 content-head">
+                <div class="card-wrapper mb-5">
+                    <div class="card-box align-center">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row content-row mt-4">
+            <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb active">
+                <div class="item-wrapper">
+                    <div class="title mb-3">
+                        <span class="num mbr-fonts-style display-1"><strong>100K+</strong></span>
+                    </div>
+                    <h4 class="card-title mbr-fonts-style display-5">
+                        <strong>Happy Customers</strong>
+                    </h4>
+                </div>
+            </div><div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+                <div class="item-wrapper">
+                    <div class="title mb-3">
+                        <span class="num mbr-fonts-style display-1"><strong>500+</strong></span>
+                    </div>
+                    <h4 class="card-title mbr-fonts-style display-5">
+                        <strong>Delicious Dishes</strong>
+                    </h4>
+                </div>
+            </div><div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+                <div class="item-wrapper">
+                    <div class="title mb-3">
+                        <span class="num mbr-fonts-style display-1"><strong>5000+</strong></span>
+                    </div>
+                    <h4 class="card-title mbr-fonts-style display-5">
+                        <strong>Orders Delivered</strong>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <style>
   .cid-tTToUavJZs {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -1451,7 +1897,109 @@
     color: #000;
   }
 </style>
-<style>
+<section data-bs-version="5.1" class="list1 cid-tTToUavJZs" id="faq-1-tTToUavJZs">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-12 col-lg-10 m-auto">
+				<div class="content">
+					<div class="mbr-section-head align-left mb-5">
+						<h3 class="mbr-section-title mb-2 mbr-fonts-style display-2">
+							<strong>Frequently Asked Questions</strong>
+						</h3>
+					</div>
+					<div id="bootstrap-accordion_0" class="panel-group accordionStyles accordion" role="tablist" aria-multiselectable="true">
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse1_0" aria-expanded="false" aria-controls="collapse1">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										Do you offer vegetarian options?
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse1_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										Yes, we have a wide range of delicious vegetarian dishes.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse2_0" aria-expanded="false" aria-controls="collapse2">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										Can I customize my order?
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse2_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										Absolutely! We offer customization options to cater to your specific preferences.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse3_0" aria-expanded="false" aria-controls="collapse3">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										Do you cater to dietary restrictions?
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse3_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										Yes, we can accommodate various dietary restrictions including gluten-free, vegan, and more.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse4_0" aria-expanded="false" aria-controls="collapse4">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										How do I place an order?
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse4_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										You can easily place an order through our website or by calling our customer service.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse5_0" aria-expanded="false" aria-controls="collapse5">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										What are your delivery hours?
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse5_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										We deliver from 11:00 AM to 10:00 PM, seven days a week.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+    <style>
   .cid-tTToUav7wB {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -1503,7 +2051,36 @@
     color: var(--dominant-text, #ffd7ef);
   }
 </style>
-<style>
+<section data-bs-version="5.1" class="header2 cid-tTToUav7wB" id="subscription-form-1-tTToUav7wB">
+  <div class="container">
+    <div class="row content-wrapper justify-content-center">
+      <div class="col-lg-8 mbr-form">
+        <div class="">
+          <h1 class="mbr-section-title mbr-fonts-style mb-5 display-1">
+            <strong>Stay Updated with PYaar</strong>
+          </h1>
+        </div>
+        <div class="text-wrapper align-left" data-form-type="formoid">
+          <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="">
+            <div class="row">
+              <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+              <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                Oops...! some problem!
+              </div>
+            </div>
+            <div class="dragArea row">
+              <div data-for="email" class="col-lg-6 col-md-6 col-sm-12 form-group">
+                <input type="email" name="email" placeholder="test@email.com" data-form-field="email" class="form-control display-7" value="" id="email-header02-0">
+              </div>
+              <div class="col-auto mbr-section-btn"><button type="submit" class="w-100 w-100 w-100 w-100 w-100 w-100 btn btn-secondary display-7">Subscribe</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <style>
   .cid-tTToUavdtX {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -1550,7 +2127,25 @@
     color: var(--primary-text, #ffd7ef);
   }
 </style>
-<style>
+<section data-bs-version="5.1" class="article13 cid-tTToUavdtX" id="call-to-action-3-tTToUavdtX">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card col-md-12 col-lg-10">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+                        <h4 class="card-title mbr-fonts-style display-2">
+                            <strong>Experience the PYaar Difference</strong>
+                        </h4>
+                        <div class="mbr-section-btn mt-4">
+                        <a class="btn btn-secondary display-4" href="#">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <style>
   .cid-tTToUavSuc {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -1647,7 +2242,86 @@
     max-width: 800px;
   }
 </style>
-<style>
+<section data-bs-version="5.1" class="pricing1 cid-tTToUavSuc" id="pricing-cards-1-tTToUavSuc">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 content-head">
+        <div class="mbr-section-head mb-5">
+          <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+            <strong>Pricing Plans</strong>
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="item features-without-image col-12 col-md-6 col-lg-3 item-mb">
+        <div class="item-wrapper">
+          <div class="item-head">
+            <h5 class="item-title mbr-fonts-style mb-0 display-5">
+              <strong>Basic</strong>
+            </h5>
+            <h6 class="item-subtitle mbr-fonts-style mt-0 mb-0 display-7">
+              <strong>$4.99</strong>/month
+            </h6>
+          </div>
+          <div class="item-content">
+            <p class="mbr-text mbr-fonts-style display-7">Get access to our delicious menu and enjoy exclusive discounts.</p>
+          </div>
+          <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-primary display-7">Choose Plan</a></div>
+        </div>
+      </div>
+      <div class="item features-without-image col-12 col-md-6 col-lg-3 item-mb">
+        <div class="item-wrapper">
+          <div class="item-head">
+            <h5 class="item-title mbr-fonts-style mb-0 display-5">
+              <strong>Standard</strong>
+            </h5>
+            <h6 class="item-subtitle mbr-fonts-style mt-0 mb-0 display-7">
+              <strong>$9.99</strong>/month
+            </h6>
+          </div>
+          <div class="item-content">
+            <p class="mbr-text mbr-fonts-style display-7">Upgrade to our Standard plan for additional benefits and priority delivery.</p>
+          </div>
+          <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-primary display-7">Choose Plan</a></div>
+        </div>
+      </div>
+      <div class="item features-without-image col-12 col-md-6 col-lg-3 item-mb">
+        <div class="item-wrapper">
+          <div class="item-head">
+            <h5 class="item-title mbr-fonts-style mb-0 display-5">
+              <strong>Premium</strong>
+            </h5>
+            <h6 class="item-subtitle mbr-fonts-style mt-0 mb-0 display-7">
+              <strong>$14.99</strong>/month
+            </h6>
+          </div>
+          <div class="item-content">
+            <p class="mbr-text mbr-fonts-style display-7">Indulge in the ultimate dining experience with our Premium plan.</p>
+          </div>
+          <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-primary display-7">Choose Plan</a></div>
+        </div>
+      </div>
+      <div class="item features-without-image col-12 col-md-6 col-lg-3 item-mb">
+        <div class="item-wrapper">
+          <div class="item-head">
+            <h5 class="item-title mbr-fonts-style mb-0 display-5">
+              <strong>VIP</strong>
+            </h5>
+            <h6 class="item-subtitle mbr-fonts-style mt-0 mb-0 display-7">
+              <strong>$24.99</strong>/month
+            </h6>
+          </div>
+          <div class="item-content">
+            <p class="mbr-text mbr-fonts-style display-7">Experience VIP treatment with exclusive perks and personalized service.</p>
+          </div>
+          <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-primary display-7">Choose Plan</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <style>
   .cid-tTToUavmpS {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -1709,7 +2383,32 @@
     padding: .6rem;
   }
 </style>
-<style>
+<section data-bs-version="5.1" class="social4 cid-tTToUavmpS" id="follow-us-1-tTToUavmpS">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-12">
+                <h3 class="mbr-section-title align-center mb-5 mbr-fonts-style display-2">
+                    <strong>Follow Us on Social Media</strong>
+                </h3>
+                <div class="social-list align-center">
+                    <a class="iconfont-wrapper bg-facebook m-2 " target="_blank" href="#">
+                        <span class="socicon-facebook socicon"></span>
+                    </a>
+                    <a class="iconfont-wrapper bg-twitter m-2" href="#" target="_blank">
+                        <span class="socicon-twitter socicon"></span>
+                    </a>
+                    <a class="iconfont-wrapper bg-instagram m-2" href="#" target="_blank">
+                        <span class="socicon-instagram socicon"></span>
+                    </a>
+                    <a class="iconfont-wrapper bg-tiktok m-2" href="#" target="_blank">
+                        <span class="socicon-tiktok socicon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <style>
   .cid-tTToUavA4Q {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -1757,962 +2456,241 @@
     max-width: 800px;
   }
 </style>
-
-
-
-</head>
-<body>
- <div id="app">
-
-    <section data-bs-version="5.1"  class="menu menu5 cid-tTToUasC0B" once="menu" id="menu-5-tTToUasC0B">
-      <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-        <div class="container">
-          <div class="navbar-brand">
-            <span class="navbar-logo">
-              <a href="#">
-                <img src="assets/images/icon.png" style="height: 4.3rem;">
-              </a>
-            </span>
-            <span class="navbar-caption-wrap">
-              <a class="navbar-caption text-black display-4" href="#" v-text="data">PYaar</a>
-            </span>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-bs-toggle="collapse" data-target="#navbarSupportedContent"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <div class="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-              <li class="nav-item">
-                <a class="nav-link link text-black display-4" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link text-black display-4" href="#"
-                  aria-expanded="false">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link text-black display-4" href="#contacts-2-tTToUav6t9">Contact</a>
-              </li>
-            </ul>
-            <div class="navbar-buttons mbr-section-btn">
-              <a class="btn btn-primary display-4" href="login.html">Login</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </section> 
-
-    <!-- data-bg-video="https://www.youtube.com/embed/95SNbn340TE?autoplay&#x3D;1&amp;loop&#x3D;1&amp;playlist&#x3D;95SNbn340TE&amp;t&#x3D;20&amp;mute&#x3D;1&amp;playsinline&#x3D;1&amp;controls&#x3D;0&amp;showinfo&#x3D;0&amp;autohide&#x3D;1&amp;allowfullscreen&#x3D;true&amp;mode&#x3D;transparent" -->
-    <section data-bs-version="5.1" class="header18 cid-tTToUasHhv mbr-fullscreen"  id="hero-15-tTToUasHhv">
-      <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="content-wrap col-12 col-md-8">
-            <h1
-              class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1 animate__animated animate__delay-1s animate__fadeInUp">
-              <strong>PYaar Kitchen</strong>
-            </h1>
-            <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7 animate__animated animate__delay-1s animate__fadeInUp">Experience the Delight of Authentic Flavors</p>
-            <div class="mbr-section-btn">
-              <a class="btn btn-white-outline display-7 animate__animated animate__delay-1s animate__fadeInUp" href="#">Order Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-      
-    <section data-bs-version="5.1" class="article9 cid-tTToUatloX" id="about-me-9-tTToUatloX">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="card col-md-12 col-lg-10">
-            <div class="card-wrapper">
-              <div class="card-content-text">
-                <h3 class="card-title mbr-fonts-style mbr-white mt-3 mb-4 display-2">
-                <strong>About PYaar Cloud Kitchen</strong>
-              </h3>
-              <div class="row card-box align-left">
-                <div class="item features-without-image col-12">
-                  <div class="item-wrapper">
-                    <p class="mbr-text mbr-fonts-style display-7">Welcome to PYaar Cloud Kitchen, where passion meets culinary excellence.</p>
-                    <p class="mbr-text mbr-fonts-style display-7">We are a cloud kitchen dedicated to serving you the most delicious and authentic dishes from around the world.</p>
-                    <p class="mbr-text mbr-fonts-style display-7">Our team of talented chefs and food enthusiasts work tirelessly to bring you the best dining experience right at your doorstep.</p>
-                  </div>
-                </div>
-              </div>
-              </div>
-              <div class="image-wrapper d-flex justify-content-center mt-3">
-                <img src="assets/images/photo-1496412705862-e0088f16f791.jpeg">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-     
-    <section data-bs-version="5.1" class="features19 cid-tTToUat3rb" id="features-19-tTToUat3rb">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 mb-5 content-head">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-              <strong>Why Choose PYaar?</strong>
-            </h3>
-            <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">Discover the features that set us apart from the rest.</h5>
-          </div>
-        </div>
-        <div class="row">
-          <div class="item features-without-image col-12 col-lg-4">
-            <div class="item-wrapper">
-              <div class="card-box align-left">
-                <div class="img-wrapper mb-3">
-                  <img class="" src="assets/images/photo-1695653423459-beb6b8a8169b.jpeg">
-                </div>
-                <h5 class="card-title mbr-fonts-style display-5">
-                  <strong>Quality Ingredients</strong>
-                </h5>
-                <p class="card-text mbr-fonts-style display-7">We source only the freshest and finest ingredients to ensure the highest quality in every dish.</p>
-              </div>
-            </div>
-          </div>
-          <div class="item features-without-image col-12 col-lg-4">
-            <div class="item-wrapper">
-              <div class="card-box align-left">
-                <div class="img-wrapper mb-3">
-                  <img class="" src="assets/images/photo-1515003197210-e0cd71810b5f.jpeg">
-                </div>
-                <h5 class="card-title mbr-fonts-style display-5">
-                  <strong>Exquisite Flavors</strong>
-                </h5>
-                <p class="card-text mbr-fonts-style display-7">Our skilled chefs combine traditional recipes with innovative techniques to create unique and mouthwatering flavors.</p>
-              </div>
-            </div>
-          </div>
-          <div class="item features-without-image col-12 col-lg-4">
-            <div class="item-wrapper">
-              <div class="card-box align-left">
-                <div class="img-wrapper mb-3">
-                  <img class="" src="assets/images/photo-1512621776951-a57141f2eefd.jpeg">
-                </div>
-                <h5 class="card-title mbr-fonts-style display-5">
-                  <strong>Convenient Delivery</strong>
-                </h5>
-                <p class="card-text mbr-fonts-style display-7">Enjoy the convenience of doorstep delivery, bringing the taste of PYaar directly to you.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-     
-    <section data-bs-version="5.1" class="slider2 mbr-embla cid-tTToUauKxI" id="testimonials-1-tTToUauKxI">
-      <div class="position-relative text-center">
-        <div class="embla" data-skip-snaps="true" data-align="center" data-auto-play-interval="5" data-draggable="true">
-          <div class="embla__viewport container-fluid">
-            <div class="embla__container">
-              <div class="embla__slide slider-image item" style="margin-left: 10rem; margin-right: 10rem;">
-                <div class="user">
-                  <div class="user_image">
-                    <div class="item-wrapper position-relative">
-                      <img src="assets/images/me.jpg">
-                    </div>
-                  </div>
-                  <div class="user_text mb-4">
-                    <p class="mbr-fonts-style display-5">
-                      <strong>Delicious food and excellent service!</strong>
-                    </p>
-                  </div>
-                  <div class="user_name mbr-fonts-style display-7">
-                    Emily
-                  </div>
-                  <div class="user_desk mbr-fonts-style display-7">
-                    Foodie
-                  </div>
-                </div>
-              </div>
-              <div class="embla__slide slider-image item" style="margin-left: 10rem; margin-right: 10rem;">
-                <div class="user">
-                  <div class="user_image">
-                    <div class="item-wrapper position-relative">
-                      <img src="assets/images/photo-1607556114526-058f5efdf49e.jpeg">
-                    </div>
-                  </div>
-                  <div class="user_text mb-4">
-                    <p class="mbr-fonts-style display-5">
-                      <strong>PYaar never fails to impress!</strong>
-                    </p>
-                  </div>
-                  <div class="user_name mbr-fonts-style display-7">
-                    John
-                  </div>
-                  <div class="user_desk mbr-fonts-style display-7">
-                    Food Critic
-                  </div>
-                </div>
-              </div>
-              <div class="embla__slide slider-image item" style="margin-left: 10rem; margin-right: 10rem;">
-                <div class="user">
-                  <div class="user_image">
-                    <div class="item-wrapper position-relative">
-                      <img src="assets/images/photo-1568530134868-5d89f49d5a72.jpeg">
-                    </div>
-                  </div>
-                  <div class="user_text mb-4">
-                    <p class="mbr-fonts-style display-5">
-                      <strong>The best cloud kitchen in town!</strong>
-                    </p>
-                  </div>
-                  <div class="user_name mbr-fonts-style display-7">
-                    Sophia
-                  </div>
-                  <div class="user_desk mbr-fonts-style display-7">
-                    Food Blogger
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="embla__button embla__button--prev">
-            <span class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont" aria-hidden="true"></span>
-            <span class="sr-only visually-hidden visually-hidden visually-hidden">Previous</span>
-          </button>
-          <button class="embla__button embla__button--next">
-            <span class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont" aria-hidden="true"></span>
-            <span class="sr-only visually-hidden visually-hidden visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </section>
-       
-    <section data-bs-version="5.1" class="features03 cid-tTToUausqQ" id="events-1-tTToUausqQ">
-      <div class="container-fluid">
+<section data-bs-version="5.1" class="features03 cid-tTToUavA4Q" id="clients-1-tTToUavA4Q">
+    <div class="container-fluid">
         <div class="row justify-content-center mb-5">
-          <div class="col-12 content-head">
-            <div class="mbr-section-head">
-              <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                <strong>Upcoming Events</strong>
-              </h4>
+            <div class="col-12 content-head">
+                <div class="mbr-section-head">
+                    <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                        <strong>Our Partners</strong>
+                    </h4>
+                </div>
             </div>
-          </div>
         </div>
         <div class="row">
-          <div class="item features-image col-12 col-md-6 col-lg-3 active">
-            <div class="item-wrapper">
-              <div class="item-img mb-3">
-                <img src="assets/images/photo-1473093295043-cdd812d0e601.jpeg" title="">
-              </div>
-              <div class="item-content align-left">
-                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-                  <strong><a class="text-black fw-bold" href="#">Taste of Italy</a></strong>
-                </h6>
-                <p class="mbr-text mbr-fonts-style mb-3 display-7">November 5, 2023</p>
-                <p class="mbr-text mbr-fonts-style mb-3 display-7">Experience the flavors of Italy with our special menu.</p>
-                <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Join</a></div>
-              </div>
+            <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2 active">
+                <div class="item-wrapper">
+                    <div class="item-img mb-3">
+                        <img src="assets/images/short4.png" title="" data-slide-to="1" data-bs-slide-to="1">
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="item features-image col-12 col-md-6 col-lg-3">
-            <div class="item-wrapper">
-              <div class="item-img mb-3">
-                <img src="assets/images/photo-1494859802809-d069c3b71a8a.jpeg" title="" data-slide-to="1" data-bs-slide-to="1">
-              </div>
-              <div class="item-content align-left">
-                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-                  <strong><a class="text-black fw-bold" href="#">Spice Festival</a></strong>
-                </h6>
-                <p class="mbr-text mbr-fonts-style mb-3 display-7">November 12, 2023</p>
-                <p class="mbr-text mbr-fonts-style mb-3 display-7">Get ready for a spicy culinary adventure like no other.</p>
-                <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Join</a></div>
-              </div>
+            <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
+                <div class="item-wrapper">
+                    <div class="item-img mb-3">
+                        <img src="assets/images/short5.png" title="" data-slide-to="2" data-bs-slide-to="2">
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="item features-image col-12 col-md-6 col-lg-3">
-            <div class="item-wrapper">
-              <div class="item-img mb-3">
-                <img src="assets/images/photo-1543339308-43e59d6b73a6.jpeg" title="" data-slide-to="2" data-bs-slide-to="2">
-              </div>
-              <div class="item-content align-left">
-                <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
-                  <strong><a class="text-black fw-bold" href="#">Seafood Extravaganza</a></strong>
-                </h6>
-                <p class="mbr-text mbr-fonts-style mb-3 display-7">November 19, 2023</p>
-                <p class="mbr-text mbr-fonts-style mb-3 display-7">Indulge in a feast of the freshest seafood delicacies.</p>
-                <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Join</a></div>
-              </div>
+            <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
+                <div class="item-wrapper">
+                    <div class="item-img mb-3">
+                        <img src="assets/images/short1.png" title="" data-slide-to="3" data-bs-slide-to="3">
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="item features-image col-12 col-md-6 col-lg-3">
-            <div class="item-wrapper">
-              <div class="item-img mb-3">
-                <img src="assets/images/photo-1498837167922-ddd27525d352.jpeg" title="" data-slide-to="3" data-bs-slide-to="3">
-              </div>
-              <div class="item-content align-left">
-                <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
-                  <strong><a class="text-black fw-bold" href="#">Holiday Feast</a></strong>
-                </h6>
-                <p class="mbr-text mbr-fonts-style mb-3 display-7">December 24, 2023</p>
-                <p class="mbr-text mbr-fonts-style mb-3 display-7">Celebrate the holiday season with a lavish feast at PYaar.</p>
-                <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Join</a></div>
-              </div>
+            <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
+                <div class="item-wrapper">
+                    <div class="item-img mb-3">
+                        <img src="assets/images/short2.png" title="" data-slide-to="4" data-bs-slide-to="4">
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-      
-    <section data-bs-version="5.1" class="slider4 mbr-embla cid-tTToUauSOS" id="gallery-5-tTToUauSOS">
-        <div class="container-fluid">
-            <div class="row mb-5 justify-content-center">
-          <div class="col-12 content-head">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-              <strong>A Visual Delight</strong>
-            </h3>
-          </div>
-        </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="embla position-relative" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-loop="true" data-auto-play-interval="5" data-draggable="true">
-                        <div class="embla__viewport">
-                            <div class="embla__container">
-                                <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
-                                    <a href="#">
-                                        <div class="slide-content">
-                                            <div class="item-img">
-                                                <div class="item-wrapper">
-                                                    <img src="assets/images/photo-1455619452474-d2be8b1e70cd.jpeg" title="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
-                                    <a href="#">
-                                        <div class="slide-content">
-                                            <div class="item-img">
-                                                <div class="item-wrapper">
-                                                    <img src="assets/images/photo-1606787366850-de6330128bfc.jpeg" title="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
-                                    <a href="#">
-                                        <div class="slide-content">
-                                            <div class="item-img">
-                                                <div class="item-wrapper">
-                                                    <img src="assets/images/photo-1505935428862-770b6f24f629.jpeg" title="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
-                                    <a href="#">
-                                        <div class="slide-content">
-                                            <div class="item-img">
-                                                <div class="item-wrapper">
-                                                    <img src="assets/images/photo-1504674900247-0877df9cc836.jpeg" title="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
-                                    <a href="#">
-                                        <div class="slide-content">
-                                            <div class="item-img">
-                                                <div class="item-wrapper">
-                                                    <img src="assets/images/photo-1490818387583-1baba5e638af.jpeg" title="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="embla__button embla__button--prev">
-                            <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
-                            <span class="sr-only visually-hidden visually-hidden">Previous</span>
-                        </button>
-                        <button class="embla__button embla__button--next">
-                            <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
-                            <span class="sr-only visually-hidden visually-hidden">Next</span>
-                        </button>
+            <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
+                <div class="item-wrapper">
+                    <div class="item-img mb-3">
+                        <img src="assets/images/short6.png" title="" data-slide-to="5" data-bs-slide-to="5">
+                    </div>
+                </div>
+            </div>
+            <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
+                <div class="item-wrapper">
+                    <div class="item-img mb-3">
+                        <img src="assets/images/short3.png" title="" data-slide-to="6" data-bs-slide-to="6">
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-       
-    <section data-bs-version="5.1" class="features4 cid-tTToUau3Wo" id="service-list-2-tTToUau3Wo">
-      <div class="container">
+    </div>
+</section>
+    <style>
+  .cid-tTToUavkI0 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: transparent;
+  }
+  .cid-tTToUavkI0 .mbr-overlay {
+    background-color: #ffffff;
+    opacity: 0.4;
+  }
+  .cid-tTToUavkI0 form .mbr-section-btn {
+    text-align: center;
+    width: 100%;
+  }
+  .cid-tTToUavkI0 form .mbr-section-btn .btn {
+    display: inline-flex;
+  }
+  @media (max-width: 991px) {
+    .cid-tTToUavkI0 form .mbr-section-btn .btn {
+      width: 100%;
+    }
+  }
+  .cid-tTToUavkI0 .content-head {
+    max-width: 800px;
+  }
+</style>
+<section data-bs-version="5.1" class="form5 cid-tTToUavkI0" id="contact-form-2-tTToUavkI0">
+    <div class="container">
         <div class="row justify-content-center">
-          <div class="col-12 content-head">
-            <div class="mbr-section-head mb-5">
-              <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                <strong>Services</strong>
-              </h4>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="item features-image col-12 col-md-6 col-lg-4">
-            <div class="item-wrapper">
-              <div class="item-img">
-                <img src="assets/images/photo-1490645935967-10de6ba17061.jpeg">
-              </div>
-              <div class="item-content">
-                <h5 class="item-title mbr-fonts-style display-5">
-                  <strong>Catering</strong>
-                </h5>
-                <h6 class="item-subtitle mbr-fonts-style display-7">$99</h6>
-                <p class="mbr-text mbr-fonts-style display-7">Let us take care of your next event with our professional catering services.</p>
-                <div class="mbr-section-btn item-footer">
-                <a href="" class="btn item-btn btn-primary display-7">Book Now</a>
-              </div>
-              </div>
-            </div>
-          </div>
-          <div class="item features-image col-12 col-md-6 col-lg-4">
-            <div class="item-wrapper">
-              <div class="item-img">
-                <img src="assets/images/photo-1695653422543-7da6d6744364.jpeg">
-              </div>
-              <div class="item-content">
-                <h5 class="item-title mbr-fonts-style display-5">
-                  <strong>Meal Plans</strong>
-                </h5>
-                <h6 class="item-subtitle mbr-fonts-style display-7">$49</h6>
-                <p class="mbr-text mbr-fonts-style display-7">Enjoy delicious and healthy meals delivered to your doorstep with our customizable meal plans.</p>
-                <div class="mbr-section-btn item-footer">
-                  <a href="" class="btn item-btn btn-primary display-7">Book Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item features-image col-12 col-md-6 col-lg-4">
-            <div class="item-wrapper">
-              <div class="item-img">
-                <img src="assets/images/photo-1695653423034-d15c9f3d1328.jpeg">
-              </div>
-              <div class="item-content">
-                <h5 class="item-title mbr-fonts-style display-5">
-                  <strong>Special Events</strong>
-                </h5>
-                <h6 class="item-subtitle mbr-fonts-style display-7">$199</h6>
-                <p class="mbr-text mbr-fonts-style display-7">Make your special occasions unforgettable with our personalized event planning and catering services.</p>
-                <div class="mbr-section-btn item-footer">
-                  <a href="" class="btn item-btn btn-primary display-7">Book Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-      
-    <section data-bs-version="5.1" class="article4 cid-tTToUau8o4" id="generic-text-4-tTToUau8o4">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-12 col-lg-5 image-wrapper">
-            <img class="w-100" src="assets/images/photo-1496116218417-1a781b1c416c.jpeg">
-          </div>
-          <div class="col-12 col-md-12 col-lg">
-            <div class="text-wrapper align-left">
-              <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
-                <strong>Experience the PYaar Difference</strong>
-              </h1>
-              <p class="mbr-text mbr-fonts-style mb-3 display-7">At PYaar Cloud Kitchen, we believe that food is not just about sustenance, but a way to create lasting memories.</p>
-              <p class="mbr-text mbr-fonts-style mb-3 display-7">With our passion for culinary excellence and commitment to quality, we strive to deliver an exceptional dining experience to our customers.</p>
-              <p class="mbr-text mbr-fonts-style mb-3 display-7">Join us on this gastronomic journey and discover the PYaar difference for yourself.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-     
-    <section data-bs-version="5.1" class="timeline01 cid-tTToUaub4h" id="timeline-1-tTToUaub4h">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 mb-5 content-head">
+            <div class="col-12 content-head">
+                <div class="mbr-section-head mb-5">
                     <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                        <strong>Our Journey</strong>
+                        <strong>Get in Touch</strong>
                     </h3>
                 </div>
             </div>
-            <div class="row justify-content-center item features-without-image mb-5">
-                <div class="col-12 col-md">
-                    <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-7">
-                        <strong>Inception</strong>
-                    </h5>
-                    <h6 class="mbr-card-subtitle mbr-fonts-style mt-0 mb-3 display-7">2018</h6>
-                </div>
-                <div class="col-md-12 col-lg-6 item-wrapper">
-                    <p class="mbr-text mbr-fonts-style mt-0 mb-0 display-7">PYaar Cloud Kitchen was founded with a vision to revolutionize the food delivery industry.</p>
-                </div>
-            </div>
-            <div class="row justify-content-center item features-without-image mb-5">
-                <div class="col-12 col-md">
-                    <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-7">
-                        <strong>Expansion</strong>
-                    </h5>
-                    <h6 class="mbr-card-subtitle mbr-fonts-style mt-0 mb-3 display-7">2020</h6>
-                </div>
-                <div class="col-md-12 col-lg-6 item-wrapper">
-                    <p class="mbr-text mbr-fonts-style mt-0 mb-0 display-7">We expanded our operations to serve more customers and introduced new cuisines to our menu.</p>
-                </div>
-            </div>
-            <div class="row justify-content-center item features-without-image mb-5">
-                <div class="col-12 col-md">
-                    <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-7">
-                        <strong>Innovation</strong>
-                    </h5>
-                    <h6 class="mbr-card-subtitle mbr-fonts-style mt-0 mb-3 display-7">2022</h6>
-                </div>
-                <div class="col-md-12 col-lg-6 item-wrapper">
-                    <p class="mbr-text mbr-fonts-style mt-0 mb-0 display-7">Continuously striving for innovation, we introduced state-of-the-art technology to enhance our delivery services.</p>
-                </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="">
+                    <div class="row">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                            Oops...! some problem!
+                        </div>
+                    </div>
+                    <div class="dragArea row">
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-form02-0">
+                        </div>
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="email">
+                            <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control" value="" id="email-form02-0">
+                        </div>
+                        <div class="col-12 form-group mb-3" data-for="textarea">
+                            <textarea name="textarea" placeholder="Message" data-form-field="textarea" class="form-control" id="textarea-form02-0"></textarea>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-primary display-7">Send Message</button></div>
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
-       
-    <section data-bs-version="5.1" class="features23 cid-tTToUav3Sc" id="metrics-1-tTToUav3Sc">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 content-head">
-                    <div class="card-wrapper mb-5">
-                        <div class="card-box align-center">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row content-row mt-4">
-                <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb active">
-                    <div class="item-wrapper">
-                        <div class="title mb-3">
-                            <span class="num mbr-fonts-style display-1"><strong>100K+</strong></span>
-                        </div>
-                        <h4 class="card-title mbr-fonts-style display-5">
-                            <strong>Happy Customers</strong>
-                        </h4>
-                    </div>
-                </div><div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
-                    <div class="item-wrapper">
-                        <div class="title mb-3">
-                            <span class="num mbr-fonts-style display-1"><strong>500+</strong></span>
-                        </div>
-                        <h4 class="card-title mbr-fonts-style display-5">
-                            <strong>Delicious Dishes</strong>
-                        </h4>
-                    </div>
-                </div><div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
-                    <div class="item-wrapper">
-                        <div class="title mb-3">
-                            <span class="num mbr-fonts-style display-1"><strong>5000+</strong></span>
-                        </div>
-                        <h4 class="card-title mbr-fonts-style display-5">
-                            <strong>Orders Delivered</strong>
-                        </h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-      
-    <section data-bs-version="5.1" class="list1 cid-tTToUavJZs" id="faq-1-tTToUavJZs">
-      <div class="container">
+    </div>
+</section>
+    <style>
+  .cid-tTToUav6t9 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: transparent;
+  }
+  .cid-tTToUav6t9 .mbr-fallback-image.disabled {
+    display: none;
+  }
+  .cid-tTToUav6t9 .mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+  @media (max-width: 767px) {
+    .cid-tTToUav6t9 .row .map-wrapper {
+      margin-top: 1rem;
+    }
+  }
+  .cid-tTToUav6t9 .google-map {
+    height: 100%;
+    position: relative;
+  }
+  .cid-tTToUav6t9 .google-map iframe {
+    height: 100%;
+    width: 100%;
+  }
+  @media (max-width: 767px) {
+    .cid-tTToUav6t9 .google-map iframe {
+      min-height: 350px;
+    }
+  }
+  .cid-tTToUav6t9 .google-map [data-state-details] {
+    color: #6b6763;
+    height: 1.5em;
+    margin-top: -0.75em;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+  }
+  .cid-tTToUav6t9 .google-map[data-state] {
+    background: #e9e5dc;
+  }
+  .cid-tTToUav6t9 .google-map[data-state="loading"] [data-state-details] {
+    display: none;
+  }
+  .cid-tTToUav6t9 .card-wrapper {
+    background: #ffffff;
+  }
+  @media (max-width: 767px) {
+    .cid-tTToUav6t9 .card-wrapper {
+      padding: 2rem 1.5rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .cid-tTToUav6t9 .card-wrapper {
+      padding: 2.25rem;
+    }
+  }
+  .cid-tTToUav6t9 .text-wrapper {
+    padding: 0 1rem;
+  }
+  .cid-tTToUav6t9 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .cid-tTToUav6t9 .content-head {
+    max-width: 800px;
+  }
+  .cid-tTToUav6t9 .mbr-section-title {
+    color: #000000;
+  }
+</style>
+<section data-bs-version="5.1" class="contacts2 map1 cid-tTToUav6t9" id="contacts-2-tTToUav6t9">
+    <div class="container">
         <div class="row justify-content-center">
-          <div class="col-12 col-md-12 col-lg-10 m-auto">
-            <div class="content">
-              <div class="mbr-section-head align-left mb-5">
-                <h3 class="mbr-section-title mb-2 mbr-fonts-style display-2">
-                  <strong>Frequently Asked Questions</strong>
-                </h3>
-              </div>
-              <div id="bootstrap-accordion_0" class="panel-group accordionStyles accordion" role="tablist" aria-multiselectable="true">
-                <div class="card mb-3">
-                  <div class="card-header" role="tab" id="headingOne">
-                    <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse1_0" aria-expanded="false" aria-controls="collapse1">
-                      <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                        Do you offer vegetarian options?
-                      </h6>
-                      <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                    </a>
-                  </div>
-                  <div id="collapse1_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
-                    <div class="panel-body">
-                      <p class="mbr-fonts-style panel-text display-7">
-                        Yes, we have a wide range of delicious vegetarian dishes.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-3">
-                  <div class="card-header" role="tab" id="headingOne">
-                    <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse2_0" aria-expanded="false" aria-controls="collapse2">
-                      <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                        Can I customize my order?
-                      </h6>
-                      <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                    </a>
-                  </div>
-                  <div id="collapse2_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
-                    <div class="panel-body">
-                      <p class="mbr-fonts-style panel-text display-7">
-                        Absolutely! We offer customization options to cater to your specific preferences.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-3">
-                  <div class="card-header" role="tab" id="headingOne">
-                    <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse3_0" aria-expanded="false" aria-controls="collapse3">
-                      <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                        Do you cater to dietary restrictions?
-                      </h6>
-                      <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                    </a>
-                  </div>
-                  <div id="collapse3_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
-                    <div class="panel-body">
-                      <p class="mbr-fonts-style panel-text display-7">
-                        Yes, we can accommodate various dietary restrictions including gluten-free, vegan, and more.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-3">
-                  <div class="card-header" role="tab" id="headingOne">
-                    <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse4_0" aria-expanded="false" aria-controls="collapse4">
-                      <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                        How do I place an order?
-                      </h6>
-                      <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                    </a>
-                  </div>
-                  <div id="collapse4_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
-                    <div class="panel-body">
-                      <p class="mbr-fonts-style panel-text display-7">
-                        You can easily place an order through our website or by calling our customer service.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-3">
-                  <div class="card-header" role="tab" id="headingOne">
-                    <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse5_0" aria-expanded="false" aria-controls="collapse5">
-                      <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
-                        What are your delivery hours?
-                      </h6>
-                      <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                    </a>
-                  </div>
-                  <div id="collapse5_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
-                    <div class="panel-body">
-                      <p class="mbr-fonts-style panel-text display-7">
-                        We deliver from 11:00 AM to 10:00 PM, seven days a week.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-      
-    <section data-bs-version="5.1" class="header2 cid-tTToUav7wB" id="subscription-form-1-tTToUav7wB">
-      <div class="container">
-        <div class="row content-wrapper justify-content-center">
-          <div class="col-lg-8 mbr-form">
-            <div class="">
-              <h1 class="mbr-section-title mbr-fonts-style mb-5 display-1">
-                <strong>Stay Updated with PYaar</strong>
-              </h1>
-            </div>
-            <div class="text-wrapper align-left" data-form-type="formoid">
-              <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="">
-                <div class="row">
-                  <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
-                  <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                    Oops...! some problem!
-                  </div>
-                </div>
-                <div class="dragArea row">
-                  <div data-for="email" class="col-lg-6 col-md-6 col-sm-12 form-group">
-                    <input type="email" name="email" placeholder="test@email.com" data-form-field="email" class="form-control display-7" value="" id="email-header02-0">
-                  </div>
-                  <div class="col-auto mbr-section-btn"><button type="submit" class="w-100 w-100 w-100 w-100 w-100 w-100 btn btn-secondary display-7">Subscribe</button></div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-       
-    <section data-bs-version="5.1" class="article13 cid-tTToUavdtX" id="call-to-action-3-tTToUavdtX">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="card col-md-12 col-lg-10">
-                    <div class="card-wrapper">
-                        <div class="card-box align-left">
-                            <h4 class="card-title mbr-fonts-style display-2">
-                                <strong>Experience the PYaar Difference</strong>
-                            </h4>
-                            <div class="mbr-section-btn mt-4">
-                            <a class="btn btn-secondary display-4" href="#">Order Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-      
-    <section data-bs-version="5.1" class="pricing1 cid-tTToUavSuc" id="pricing-cards-1-tTToUavSuc">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 content-head">
-            <div class="mbr-section-head mb-5">
-              <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                <strong>Pricing Plans</strong>
-              </h4>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="item features-without-image col-12 col-md-6 col-lg-3 item-mb">
-            <div class="item-wrapper">
-              <div class="item-head">
-                <h5 class="item-title mbr-fonts-style mb-0 display-5">
-                  <strong>Basic</strong>
-                </h5>
-                <h6 class="item-subtitle mbr-fonts-style mt-0 mb-0 display-7">
-                  <strong>$4.99</strong>/month
-                </h6>
-              </div>
-              <div class="item-content">
-                <p class="mbr-text mbr-fonts-style display-7">Get access to our delicious menu and enjoy exclusive discounts.</p>
-              </div>
-              <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-primary display-7">Choose Plan</a></div>
-            </div>
-          </div>
-          <div class="item features-without-image col-12 col-md-6 col-lg-3 item-mb">
-            <div class="item-wrapper">
-              <div class="item-head">
-                <h5 class="item-title mbr-fonts-style mb-0 display-5">
-                  <strong>Standard</strong>
-                </h5>
-                <h6 class="item-subtitle mbr-fonts-style mt-0 mb-0 display-7">
-                  <strong>$9.99</strong>/month
-                </h6>
-              </div>
-              <div class="item-content">
-                <p class="mbr-text mbr-fonts-style display-7">Upgrade to our Standard plan for additional benefits and priority delivery.</p>
-              </div>
-              <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-primary display-7">Choose Plan</a></div>
-            </div>
-          </div>
-          <div class="item features-without-image col-12 col-md-6 col-lg-3 item-mb">
-            <div class="item-wrapper">
-              <div class="item-head">
-                <h5 class="item-title mbr-fonts-style mb-0 display-5">
-                  <strong>Premium</strong>
-                </h5>
-                <h6 class="item-subtitle mbr-fonts-style mt-0 mb-0 display-7">
-                  <strong>$14.99</strong>/month
-                </h6>
-              </div>
-              <div class="item-content">
-                <p class="mbr-text mbr-fonts-style display-7">Indulge in the ultimate dining experience with our Premium plan.</p>
-              </div>
-              <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-primary display-7">Choose Plan</a></div>
-            </div>
-          </div>
-          <div class="item features-without-image col-12 col-md-6 col-lg-3 item-mb">
-            <div class="item-wrapper">
-              <div class="item-head">
-                <h5 class="item-title mbr-fonts-style mb-0 display-5">
-                  <strong>VIP</strong>
-                </h5>
-                <h6 class="item-subtitle mbr-fonts-style mt-0 mb-0 display-7">
-                  <strong>$24.99</strong>/month
-                </h6>
-              </div>
-              <div class="item-content">
-                <p class="mbr-text mbr-fonts-style display-7">Experience VIP treatment with exclusive perks and personalized service.</p>
-              </div>
-              <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-primary display-7">Choose Plan</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-      
-    <section data-bs-version="5.1" class="social4 cid-tTToUavmpS" id="follow-us-1-tTToUavmpS">
-        <div class="container">
-            <div class="media-container-row">
-                <div class="col-12">
-                    <h3 class="mbr-section-title align-center mb-5 mbr-fonts-style display-2">
-                        <strong>Follow Us on Social Media</strong>
+            <div class="col-12 content-head">
+                <div class="mbr-section-head mb-5">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                        <strong>Contact Us</strong>
                     </h3>
-                    <div class="social-list align-center">
-                        <a class="iconfont-wrapper bg-facebook m-2 " target="_blank" href="#">
-                            <span class="socicon-facebook socicon"></span>
-                        </a>
-                        <a class="iconfont-wrapper bg-twitter m-2" href="#" target="_blank">
-                            <span class="socicon-twitter socicon"></span>
-                        </a>
-                        <a class="iconfont-wrapper bg-instagram m-2" href="#" target="_blank">
-                            <span class="socicon-instagram socicon"></span>
-                        </a>
-                        <a class="iconfont-wrapper bg-tiktok m-2" href="#" target="_blank">
-                            <span class="socicon-tiktok socicon"></span>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
-    </section>
-       
-    <section data-bs-version="5.1" class="features03 cid-tTToUavA4Q" id="clients-1-tTToUavA4Q">
-        <div class="container-fluid">
-            <div class="row justify-content-center mb-5">
-                <div class="col-12 content-head">
-                    <div class="mbr-section-head">
-                        <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                            <strong>Our Partners</strong>
-                        </h4>
+        <div class="row justify-content-center mt-4">
+            <div class="card col-12 col-md-6">
+                <div class="card-wrapper">
+                    <div class="text-wrapper">
+                    <ul class="list mbr-fonts-style display-7">
+                        <li class="mbr-text item-wrap">Phone: <a href="tel:+919892114727" class="" style="color:#000000!important">+919892114727</a></li>
+                        <li class="mbr-text item-wrap">WhatsApp: <a href="tel:+919892114727" class=""  style="color:#000000!important">+919892114727</a></li>
+                        <li class="mbr-text item-wrap">Email: <a href="mailto:pyaarcloudkitchen@gmail.com" class=""  style="color:#000000!important">pyaarcloudkitchen@gmail.com</a></li>
+                        <li class="mbr-text item-wrap">Address: Vadodara India</li>
+                        <li class="mbr-text item-wrap">Working Hours: Mon - Fri: 11:00 AM - 10:00 PM, Sat - Sun: 11:00 AM - 9:00 PM</li>
+               </ul>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2 active">
-                    <div class="item-wrapper">
-                        <div class="item-img mb-3">
-                            <img src="assets/images/short4.png" title="" data-slide-to="1" data-bs-slide-to="1">
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
-                    <div class="item-wrapper">
-                        <div class="item-img mb-3">
-                            <img src="assets/images/short5.png" title="" data-slide-to="2" data-bs-slide-to="2">
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
-                    <div class="item-wrapper">
-                        <div class="item-img mb-3">
-                            <img src="assets/images/short1.png" title="" data-slide-to="3" data-bs-slide-to="3">
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
-                    <div class="item-wrapper">
-                        <div class="item-img mb-3">
-                            <img src="assets/images/short2.png" title="" data-slide-to="4" data-bs-slide-to="4">
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
-                    <div class="item-wrapper">
-                        <div class="item-img mb-3">
-                            <img src="assets/images/short6.png" title="" data-slide-to="5" data-bs-slide-to="5">
-                        </div>
-                    </div>
-                </div>
-                <div class="item features-image col-12 col-md-6 col-sm-6 col-lg-2">
-                    <div class="item-wrapper">
-                        <div class="item-img mb-3">
-                            <img src="assets/images/short3.png" title="" data-slide-to="6" data-bs-slide-to="6">
-                        </div>
-                    </div>
+            <div class="map-wrapper col-12 col-md-6">
+                <div class="google-map">
+                  <iframe frameborder="0" style="border:0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key&#x3D;AIzaSyCt1265A4qvZy9HKUeA8J15AOC4SrCyZe4&amp;q&#x3D;Vadodara%20India" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
-    </section>
-       
-    <section data-bs-version="5.1" class="form5 cid-tTToUavkI0" id="contact-form-2-tTToUavkI0">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 content-head">
-                    <div class="mbr-section-head mb-5">
-                        <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                            <strong>Get in Touch</strong>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center mt-4">
-                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                    <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="">
-                        <div class="row">
-                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
-                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                                Oops...! some problem!
-                            </div>
-                        </div>
-                        <div class="dragArea row">
-                            <div class="col-md col-sm-12 form-group mb-3" data-for="name">
-                                <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-form02-0">
-                            </div>
-                            <div class="col-md col-sm-12 form-group mb-3" data-for="email">
-                                <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control" value="" id="email-form02-0">
-                            </div>
-                            <div class="col-12 form-group mb-3" data-for="textarea">
-                                <textarea name="textarea" placeholder="Message" data-form-field="textarea" class="form-control" id="textarea-form02-0"></textarea>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-primary display-7">Send Message</button></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section data-bs-version="5.1" class="contacts2 map1 cid-tTToUav6t9" id="contacts-2-tTToUav6t9">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 content-head">
-                    <div class="mbr-section-head mb-5">
-                        <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                            <strong>Contact Us</strong>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center mt-4">
-                <div class="card col-12 col-md-6">
-                    <div class="card-wrapper">
-                        <div class="text-wrapper">
-                        <ul class="list mbr-fonts-style display-7">
-                            <li class="mbr-text item-wrap">Phone: <a href="tel:+919892114727" class="" style="color:#000000!important">+919892114727</a></li>
-                            <li class="mbr-text item-wrap">WhatsApp: <a href="tel:+919892114727" class=""  style="color:#000000!important">+919892114727</a></li>
-                            <li class="mbr-text item-wrap">Email: <a href="mailto:pyaarcloudkitchen@gmail.com" class=""  style="color:#000000!important">pyaarcloudkitchen@gmail.com</a></li>
-                            <li class="mbr-text item-wrap">Address: Vadodara India</li>
-                            <li class="mbr-text item-wrap">Working Hours: Mon - Fri: 11:00 AM - 10:00 PM, Sat - Sun: 11:00 AM - 9:00 PM</li>
-                   </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="map-wrapper col-12 col-md-6">
-                    <div class="google-map">
-                      <iframe frameborder="0" style="border:0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key&#x3D;AIzaSyCt1265A4qvZy9HKUeA8J15AOC4SrCyZe4&amp;q&#x3D;Vadodara%20India" allowfullscreen=""></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
- </div>
+    </div>
+</section>
+
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/dropdown/js/navbar-dropdown.js"></script>
   <script src="assets/embla/embla.min.js"></script>
@@ -2725,23 +2703,11 @@
   <script src="assets/Js/server.js"></script>
 
   <script>
-    const { createApp, ref } = Vue
-  
-  createApp({
-    setup() {
-        async function loadData() {
-    const response = await fetch('assets/Js/database.json');
-    const data = await response.json();
-    console.log(data);
-    return data;
-  }
-       
-      const data = loadData();
-      return {
-        data
-      }
-    }
-  }).mount('#app')
-  </script>  
+
+    // const animationInput = document.createElement('input');
+    // animationInput.setAttribute('name', 'animation')
+    // document.body.append(animationInput);
+
+  </script>
 </body>
 </html>
