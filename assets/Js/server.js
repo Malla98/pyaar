@@ -1,6 +1,5 @@
-
-async function initDatabase() {
-    const jsonFile = '/Js/database.json';
-    const data = await fetch(jsonFile).then(response => response.json());
-    return ;
-}
+async function loadData() {
+    const response = await fetch('assets/Js/database.json');
+    const data = await response.json();
+    return data;
+  }
