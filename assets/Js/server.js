@@ -2,7 +2,7 @@ async function initDatabase() {
   return await fetch('assets/Js/database.json').json();
 }
 async function iniAuth() {
-  return await fetch('assets/Js/auth.json').json().users;
+  return await fetch('assets/Js/auth.json').json();
 }
 
 function auth() {
@@ -14,8 +14,9 @@ function auth() {
   }
 }
 function login(username, password) {
-  var users = iniAuth();
-  var user = users.find((user) => user.username === username && user.password === password);
+  var response = iniAuth();
+  console.log(response);
+  var user = response.users.find((user) => user.username === username && user.password === password);
   if (user) {
     localStorage.setItem("session", JSON.stringify(user));
     return true;
