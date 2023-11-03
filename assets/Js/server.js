@@ -34,6 +34,8 @@ function middleware() {
       window.location.href = 'https://malla98.github.io/pyaar/dashboard.html';
     }
   } else {
-    window.location.href = 'https://malla98.github.io/pyaar/login.html';
+    if(window.location.href != 'https://malla98.github.io/pyaar/login.html'){
+      window.location.href = 'https://malla98.github.io/pyaar/login.html';
+    }
   }
 }
