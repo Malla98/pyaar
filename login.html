@@ -117,9 +117,9 @@
   <script>
     $(function () {
       $('#error').hide();
-      if (auth()) {
-        window.location.href = 'https://malla98.github.io/pyaar/dashboard.html';
-      }
+      middleware();
+       
+      
 
       $('#login').submit(function (e) {
         e.preventDefault();
