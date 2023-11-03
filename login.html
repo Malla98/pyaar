@@ -116,11 +116,10 @@
   <script src="assets/Js/server.js"></script>
   <script>
     $(function () {
-      $('#error').hide();
       middleware();
-       
-      
+      $('#error').hide();
 
+       
       $('#login').submit(function (e) {
         e.preventDefault();
         if (!$('#username').val()) {
