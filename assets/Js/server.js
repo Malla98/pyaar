@@ -1,8 +1,10 @@
 async function initDatabase() {
-  return await fetch('assets/Js/database.json').json();
+  var data = await fetch('assets/Js/database.json');
+  return data.json();
 }
 async function iniAuth() {
-  return await fetch('assets/Js/auth.json').json();
+  var data = await fetch('assets/Js/auth.json').json();
+  return data.json();
 }
 
 function auth() {
